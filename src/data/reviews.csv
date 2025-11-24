@@ -1,0 +1,301 @@
+review_id,place_id,place_name,author_name,rating,review_text,publish_time,reply_text,reply_publish_time
+rev_B001,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,5,"Absolutnie fantastyczny pobyt! Widok z okna na morze... bezcenny. Wrócę na 100%.",2025-11-01T14:00:00Z,"Cieszymy się, że widok się podobał! Do zobaczenia!",2025-11-01T16:00:00Z
+rev_A001,place_A_Restaurant,Restauracja 'Górski Smak',Anna Z.,1,"Dramat. Kelner pomylił zamówienia, jedzenie było zimne. Omijać.",2025-11-01T12:00:00Z,"Bardzo nam przykro z powodu tej sytuacji. To nie nasz standard. Prosimy o kontakt.",2025-11-01T15:00:00Z
+rev_B002,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,4,"Bardzo przyjemny hotel. Czysto, miła obsługa. Mały minus za wolne windy.",2025-10-31T19:00:00Z,"Dziękujemy za opinię! Zwrócimy uwagę na problem z windami.",2025-10-31T09:00:00Z
+rev_B003,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,3,"Przeciętny hotel. Lokalizacja OK, ale standard pokoju był średni. Po prostu poprawnie.",2025-10-30T15:00:00Z,,
+rev_A002,place_A_Restaurant,Restauracja 'Górski Smak',Tomasz J.,5,"Rewelacja! Pstrąg był mistrzostwem świata. Na pewno wrócimy.",2025-10-30T14:00:00Z,"Dziękujemy i zapraszamy ponownie!",2025-10-30T15:00:00Z
+rev_B004,place_B_Hotel,Hotel 'Morski Widok',Magda S.,1,"Och, *uwielbiam* kiedy o 8 rano budzi mnie odkurzacz na korytarzu. Wspaniały relaks. Serio?",2025-10-29T10:00:00Z,"Najmocniej przepraszamy za tę niedopuszczalną sytuację. Zwrócimy uwagę personelowi sprzątającemu.",2025-10-29T11:00:00Z
+rev_B005,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,5,"Najwyższy standard. Czysto, cicho, profesjonalna obsługa. Śniadanie bogate.",2025-10-29T09:00:00Z,,
+rev_A003,place_A_Restaurant,Restauracja 'Górski Smak',Agnieszka T.,4,"Bardzo smacznie, porcje duże. Mały minus za długi czas oczekiwania w weekend.",2025-10-28T20:00:00Z,"Dziękujemy za opinię! Pracujemy nad usprawnieniem serwisu w godzinach szczytu.",2025-10-29T08:00:00Z
+rev_B006,place_B_Hotel,Hotel 'Morski Widok',Jan M.,2,"Słabo. Pokój był bardzo mały, a śniadanie zimne. Nie jest to warte tej ceny.",2025-10-28T18:00:00Z,,
+rev_B007,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Perfekcyjny hotel na wyjazd biznesowy. Szybki internet, wygodne łóżko.",2025-10-28T15:00:00Z,"Dziękujemy za zaufanie!",2025-10-28T16:00:00Z
+rev_A004,place_A_Restaurant,Restauracja 'Górski Smak',Michał P.,2,"Rosół smakował jak woda, a drugie danie było ledwo ciepłe. Nie polecam.",2025-10-27T19:00:00Z,"Przykro nam to słyszeć. Przekażemy uwagi szefowi kuchni.",2025-10-28T10:00:00Z
+rev_B008,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,4,"Wszystko super, lokalizacja idealna. Trochę głośno od ulicy w nocy.",2025-10-27T14:00:00Z,,
+rev_A005,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,3,"Można zjeść, ale bez rewelacji. Jedzenie poprawne, niczym się nie wyróżnia.",2025-10-26T17:00:00Z,,
+rev_B009,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,5,"Cudowne miejsce. Basen i spa na najwyższym poziomie. Pełen relaks.",2025-10-26T11:00:00Z,"Cała przyjemność po naszej stronie!",2025-10-26T12:00:00Z
+rev_B010,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,1,"Recepcjonistka była nieuprzejma i arogancka. Czułem się jak intruz. Porażka.",2025-10-25T21:00:00Z,"To niedopuszczalne zachowanie. Wyciągniemy konsekwencje. Przepraszamy.",2025-10-26T09:00:00Z
+rev_A006,place_A_Restaurant,Restauracja 'Górski Smak',Monika C.,5,"Pierogi ruskie jak u babci! Pyszne, świeże. Na pewno tu wrócę.",2025-10-25T16:00:00Z,"Bardzo nam miło! Staramy się!",2025-10-25T17:00:00Z
+rev_B011,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,4,"Dobry hotel, choć przydałoby się odświeżyć łazienkę. Poza tym bez zarzutu.",2025-10-24T18:00:00Z,,
+rev_B012,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,5,"Idealne miejsce na weekend. Piękny widok, czysty pokój, bardzo wygodne łóżko.",2025-10-24T13:00:00Z,"Dziękujemy i zapraszamy ponownie!",2025-10-24T14:00:00Z
+rev_A007,place_A_Restaurant,Restauracja 'Górski Smak',Marcin K.,4,"Bardzo dobra kwaśnica i świetny schabowy. Ceny mogłyby być odrobinę niższe.",2025-10-23T19:00:00Z,,
+rev_B013,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,2,"Płatny parking za 80 zł za dobę? To chyba żart. Nigdy więcej.",2025-10-23T12:00:00Z,"Ceny parkingu wynikają z lokalizacji w ścisłym centrum. Przykro nam, że stanowiło to problem.",2025-10-23T14:00:00Z
+rev_B014,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,5,"Doskonała obsługa. Pan na recepcji był niezwykle pomocny. Polecam!",2025-10-22T22:00:00Z,,
+rev_A008,place_A_Restaurant,Restauracja 'Górski Smak',Ewa L.,1,"Genialnie. Pół godziny czekania na herbatę. Obsługa chyba śpi. Nie polecam.",2025-10-22T16:00:00Z,"Najmocniej przepraszamy za tak długi czas oczekiwania. To błąd w organizacji.",2025-10-22T17:00:00Z
+rev_B015,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,4,"Śniadanie było bardzo smaczne i urozmaicone. Pokój czysty. Polecam.",2025-10-21T11:00:00Z,,
+rev_A009,place_A_Restaurant,Restauracja 'Górski Smak',Magda S.,5,"Najlepszy żurek jaki jadłam w górach! Klimatyczne miejsce.",2025-10-20T17:00:00Z,"Dziękujemy! To nasz regionalny specjał.",2025-10-20T18:00:00Z
+rev_B016,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,3,"Telewizor nie działał, a internet był bardzo wolny. Poza tym OK.",2025-10-20T14:00:00Z,"Dziękujemy za zgłoszenie, sprawdzimy problem techniczny.",2025-10-20T15:00:00Z
+rev_B017,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,5,"Wszystko na plus. Czysto, pachnąco, obsługa na najwyższym poziomie.",2025-10-19T13:00:00Z,,
+rev_A010,place_A_Restaurant,Restauracja 'Górski Smak',Jan M.,2,"Ceny wysokie, a porcje małe. Wyszliśmy głodni i zawiedzeni.",2025-10-18T19:00:00Z,,
+rev_B018,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,4,"Dobry standard, wszystko zgodne z opisem. Śniadania mogłyby być cieplejsze.",2025-10-18T10:00:00Z,"Dziękujemy za opinię, przekażemy uwagi do kuchni.",2025-10-18T11:00:00Z
+rev_B019,place_B_Hotel,Hotel 'Morski Widok',Michał P.,1,"Pleśń pod prysznicem. To dyskwalifikuje to miejsce. Zdjęcia na stronie to oszustwo.",2025-10-17T20:00:00Z,"Jesteśmy zszokowani tą informacją. Prosimy o pilny kontakt i numer pokoju.",2025-10-18T09:00:00Z
+rev_A011,place_A_Restaurant,Restauracja 'Górski Smak',Karolina D.,5,"Przepyszne. Fantastyczna atmosfera, kominek, muzyka na żywo. Magia!",2025-10-17T18:00:00Z,"Cieszymy się, że mogliśmy umilić wieczór!",2025-10-17T19:00:00Z
+rev_B020,place_B_Hotel,Hotel 'Morski Widok',Adam G.,3,"Hotel jak hotel. Niczym się nie wyróżnia. Można się przespać.",2025-10-17T11:00:00Z,,
+rev_B021,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,5,"Wrócę tu na pewno. Obsługa sprawiła, że czuliśmy się wyjątkowo. Dziękujemy!",2025-10-16T15:00:00Z,"To dla nas największy komplement. Do zobaczenia!",2025-10-16T16:00:00Z
+rev_A012,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,4,"Dobre regionalne jedzenie. Obsługa miła, choć trochę zakręcona.",2025-10-15T20:00:00Z,,
+rev_B022,place_B_Hotel,Hotel 'Morski Widok',Monika C.,2,"Rezerwowałam pokój z łóżkiem małżeńskim, dostałam dwa oddzielne. Słaba organizacja.",2025-10-15T13:00:00Z,"Przepraszamy za pomyłkę. Powinniśmy byli to rozwiązać na miejscu.",2025-10-15T14:00:00Z
+rev_A013,place_A_Restaurant,Restauracja 'Górski Smak',Łukasz F.,5,"",2025-10-14T19:00:00Z,"Dziękujemy za 5 gwiazdek!",2025-10-14T20:00:00Z
+rev_B023,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,5,"Wszystko idealnie. Czysto, nowocześnie, świetna lokalizacja.",2025-10-14T10:00:00Z,,
+rev_A014,place_A_Restaurant,Restauracja 'Górski Smak',Patrycja K.,4,"Smaczny grzaniec i pyszna szarlotka. Miejsce z klimatem.",2025-10-13T18:00:00Z,,
+rev_B024,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,1,"Głośna impreza w hotelu do 3 w nocy. Recepcja nie reagowała. Koszmar.",2025-10-13T09:00:00Z,"Bardzo przepraszamy. To była sytuacja wyjątkowa, która nie powinna mieć miejsca.",2025-10-13T10:00:00Z
+rev_B025,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,5,"Polecam! Piękny design, czysto i komfortowo. Śniadania wyśmienite.",2025-10-12T16:00:00Z,"Dziękujemy za docenienie naszego designu!",2025-10-12T17:00:00Z
+rev_A015,place_A_Restaurant,Restauracja 'Górski Smak',Piotr W.,3,"Ceny trochę za wysokie jak na ten standard. Jedzenie było tylko poprawne.",2025-10-11T20:00:00Z,,
+rev_B026,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,4,"Fajne miejsce, blisko plaży. Pokój mógłby być trochę większy, ale ogólnie na plus.",2025-10-11T15:00:00Z,,
+rev_B027,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,5,"Zdecydowanie polecam. Wygodne łóżka, co jest dla mnie kluczowe.",2025-10-10T22:00:00Z,,
+rev_A016,place_A_Restaurant,Restauracja 'Górski Smak',Magda S.,1,"Ohyda. W zupie znalazłem włos. Kelnerka tylko wzruszyła ramionami.",2025-10-10T19:00:00Z,"Jesteśmy przerażeni. Prosimy o natychmiastowy kontakt, to sprawa najwyższej wagi.",2025-10-10T20:00:00Z
+rev_B028,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,2,"Niemiła obsługa na basenie. Ratownik zachowywał się, jakby był tam za karę.",2025-10-10T17:00:00Z,"Dziękujemy za sygnał. Porozmawiamy z personelem strefy SPA.",2025-10-11T09:00:00Z
+rev_B029,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,5,"",2025-10-10T11:00:00Z,,
+rev_A017,place_A_Restaurant,Restauracja 'Górski Smak',Agnieszka T.,4,"Dobra, domowa kuchnia. Bez udziwnień, ale smacznie i świeżo.",2025-10-09T16:00:00Z,"I o to nam chodzi! Dziękujemy!",2025-10-09T17:00:00Z
+rev_B030,place_B_Hotel,Hotel 'Morski Widok',Jan M.,4,"Solidny hotel. Wszystko działało, było czysto. Dobry stosunek jakości do ceny.",2025-10-09T10:00:00Z,,
+rev_B031,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Spędziłam tu wspaniały weekend. Obsługa na recepcji jest złota!",2025-10-08T14:00:00Z,"Przekażemy pochwały! Dziękujemy.",2025-10-08T15:00:00Z
+rev_A018,place_A_Restaurant,Restauracja 'Górski Smak',Zofia N.,5,"Klimat tego miejsca jest nie do podrobienia. Polecam!",2025-10-08T12:00:00Z,,
+rev_B032,place_B_Hotel,Hotel 'Morski Widok',Michał P.,3,"Średnio. Śniadanie było bardzo tłoczne, brakowało miejsc.",2025-10-07T11:00:00Z,"Przepraszamy za poranny tłok. Staramy się usprawnić serwis śniadań.",2025-10-07T12:00:00Z
+rev_A019,place_A_Restaurant,Restauracja 'Górski Smak',Karolina D.,2,"Mięso było twarde i suche. Zdecydowanie nie warte swojej ceny.",2025-10-06T19:00:00Z,,
+rev_B033,place_B_Hotel,Hotel 'Morski Widok',Adam G.,5,"Doskonały wybór. Wszędzie blisko, a sam hotel bardzo komfortowy.",2025-10-06T10:00:00Z,,
+rev_B034,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,4,"Pokoje są pięknie urządzone. Jedyny minus to brak ekspresu do kawy w pokoju.",2025-10-05T16:00:00Z,"Dziękujemy za sugestię, rozważymy to przy następnej modernizacji.",2025-10-05T17:00:00Z
+rev_A020,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,5,"Absolutne mistrzostwo. Placki po węgiersku - porcja dla drwala i przepyszna!",2025-10-05T14:00:00Z,"Cieszymy się, że smakowało! Nasze porcje są sławne!",2025-10-05T15:00:00Z
+rev_B035,place_B_Hotel,Hotel 'Morski Widok',Monika C.,1,"Ostrzegam. Zarezerwowałem pokój, a na miejscu okazało się, że nie ma rezerwacji. Skandal.",2025-10-04T22:00:00Z,"Prosimy o natychmiastowy kontakt. Musimy wyjaśnić ten błąd systemowy.",2025-10-05T09:00:00Z
+rev_B036,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,5,"Hotel na 5 gwiazdek. Obsługa, czystość, jedzenie - wszystko top.",2025-10-04T15:00:00Z,,
+rev_A021,place_A_Restaurant,Restauracja 'Górski Smak',Łukasz F.,3,"Długo się czeka na obsługę. Jedzenie samo w sobie niezłe, ale organizacja leży.",2025-10-04T13:00:00Z,,
+rev_B037,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,4,"",2025-10-03T16:00:00Z,,
+rev_A022,place_A_Restaurant,Restauracja 'Górski Smak',Marcin K.,5,"Gorąco polecam. Najlepsza restauracja w okolicy. Warto!",2025-10-03T12:00:00Z,"Dziękujemy za polecenie!",2025-10-03T13:00:00Z
+rev_B038,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,5,"Wspaniały hotel, świetna strefa spa. Na pewno wrócę na dłużej.",2025-10-02T17:00:00Z,"Zapraszamy serdecznie!",2025-10-02T18:00:00Z
+rev_A023,place_A_Restaurant,Restauracja 'Górski Smak',Anna Z.,4,"Fajne miejsce na obiad po wędrówce. Duże porcje, szybko podane.",2025-10-02T15:00:00Z,,
+rev_B039,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,3,"Bez szału. Hotel jest OK, ale zdjęcia na stronie są mocno podkoloryzowane.",2025-10-01T20:00:00Z,,
+rev_B040,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,5,"Piękny pokój z widokiem na morze. Czysto i bardzo cicho. Idealnie.",2025-10-01T14:00:00Z,"Miło nam, że pobyt był udany!",2025-10-01T15:00:00Z
+rev_A024,place_A_Restaurant,Restauracja 'Górski Smak',Tomasz J.,2,"Niestety, kaczka była sucha, a sos przypalony. Duże rozczarowanie.",2025-09-30T19:00:00Z,"Przykro nam, przekażemy uwagi kucharzowi.",2025-10-01T09:00:00Z
+rev_B041,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,4,"Bardzo dobra lokalizacja, wszędzie blisko. Pokój przestronny, polecam.",2025-09-30T11:00:00Z,,
+rev_B042,place_B_Hotel,Hotel 'Morski Widok',Magda S.,1,"*Genialnie*. Zapłacić 500 zł za noc i nie mieć ciepłej wody rano. Standardy XXI wieku.",2025-09-29T09:00:00Z,"Najmocniej przepraszamy, to była nagła awaria. Rozumiemy frustrację.",2025-09-29T10:00:00Z
+rev_A025,place_A_Restaurant,Restauracja 'Górski Smak',Krzysztof B.,5,"Jeśli jesteś w okolicy, musisz tu wpaść. Jedzenie to poezja!",2025-09-28T18:00:00Z,"Dziękujemy za tak poetycką recenzję!",2025-09-28T19:00:00Z
+rev_B043,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,5,"Wszystko zgodnie z oczekiwaniami. Czysto, profesjonalnie, bez problemów.",2025-09-28T15:00:00Z,,
+rev_B044,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,4,"Super basen. Dzieci były zachwycone. Pokoje czyste, jedzenie OK.",2025-09-27T17:00:00Z,"Cieszymy się, że strefa basenowa się podobała!",2025-09-27T18:00:00Z
+rev_A026,place_A_Restaurant,Restauracja 'Górski Smak',Agnieszka T.,3,"Bywało lepiej. Kiedyś jedzenie było smaczniejsze. Teraz tak przeciętnie.",2025-09-27T15:00:00Z,,
+rev_B045,place_B_Hotel,Hotel 'Morski Widok',Jan M.,2,"Winda zepsuta przez cały pobyt (3 dni). Musiałem chodzić na 4 piętro. Słabo.",2025-09-26T14:00:00Z,"Przepraszamy za awarię. Czekaliśmy na serwisanta, niestety trwało to dłużej niż zwykle.",2025-09-26T15:00:00Z
+rev_A027,place_A_Restaurant,Restauracja 'Górski Smak',Jan M.,5,"",2025-09-26T12:00:00Z,,
+rev_B046,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Fantastyczna obsługa, która naprawdę dba o gościa. Polecam.",2025-09-25T16:00:00Z,"Staramy się! Dziękujemy!",2025-09-25T17:00:00Z
+rev_B047,place_B_Hotel,Hotel 'Morski Widok',Michał P.,4,"Prawie idealnie. Hotel piękny, ale personel sprzątający wszedł bez pukania.",2025-09-24T11:00:00Z,"Przepraszamy za zachowanie personelu. To niedopuszczalne, zwrócimy na to uwagę.",2025-09-24T12:00:00Z
+rev_A028,place_A_Restaurant,Restauracja 'Górski Smak',Karolina D.,4,"Smaczna szarlotka na ciepło. Miejsce idealne na deser.",2025-09-23T18:00:00Z,,
+rev_B048,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,5,"Bardzo komfortowy pokój, świetnie wyciszony. Spałem jak dziecko.",2025-09-23T14:00:00Z,,
+rev_B049,place_B_Hotel,Hotel 'Morski Widok',Adam G.,2,"Hałas z ulicy był nie do zniesienia. Prośba o zmianę pokoju zignorowana.",2025-09-22T23:00:00Z,"Przykro nam, że nie mogliśmy zmienić pokoju. Hotel był w pełni obłożony.",2025-09-23T09:00:00Z
+rev_A029,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,1,"To nie jest restauracja, to bar mleczny z cenami z kosmosu. Nie polecam.",2025-09-22T19:00:00Z,,
+rev_B050,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,5,"Jeden z najlepszych hoteli w jakim byłam. Czystość na 6+.",2025-09-22T15:00:00Z,"Dziękujemy! Czystość to nasz priorytet.",2025-09-22T16:00:00Z
+rev_A030,place_A_Restaurant,Restauracja 'Górski Smak',Natalia R.,5,"Pyszne jedzenie, wspaniała atmosfera. Muzyka góralska na żywo!",2025-09-22T13:00:00Z,,
+rev_B051,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,3,"Śniadanie było OK, ale kawa z ekspresu była okropna.",2025-09-21T10:00:00Z,,
+rev_B052,place_B_Hotel,Hotel 'Morski Widok',Monika C.,4,"Dobra lokalizacja, blisko do morza. Pokój czysty, obsługa pomocna.",2025-09-20T17:00:00Z,"Dziękujemy za pozytywną opinię!",2025-09-20T18:00:00Z
+rev_A031,place_A_Restaurant,Restauracja 'Górski Smak',Monika C.,4,"Bardzo smaczne pierogi, ale wystrój lokalu mocno przestarzały.",2025-09-20T15:00:00Z,,
+rev_B053,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,1,"Wykładzina w pokoju była cała w plamach. Bałem się chodzić boso. Koszmar.",2025-09-19T20:00:00Z,"To niedopuszczalne. Natychmiast sprawdzimy ten pokój.",2025-09-20T09:00:00Z
+rev_A032,place_A_Restaurant,Restauracja 'Górski Smak',Patrycja K.,5,"Magiczne miejsce. Jedzenie to po prostu sztuka. Wrócę na pewno.",2025-09-19T18:00:00Z,"Dziękujemy za tak miłe słowa!",2025-09-19T19:00:00Z
+rev_B054,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,5,"Wszystko super. Szybkie zameldowanie, czysty pokój, wygodne łóżko.",2025-09-19T12:00:00Z,,
+rev_B055,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,4,"Generalnie polecam. Bardzo miła pani na recepcji.",2025-09-18T16:00:00Z,,
+rev_A033,place_A_Restaurant,Restauracja 'Górski Smak',Marcin K.,2,"Czekaliśmy na kartę 20 minut. Kiedy w końcu zamówiliśmy, jedzenie było zimne.",2025-09-18T14:00:00Z,"Przepraszamy za taką wpadkę. To nie powinno się zdarzyć.",2025-09-18T15:00:00Z
+rev_B056,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,5,"Zdecydowanie tak! Hotel spełnił wszystkie nasze oczekiwania.",2025-09-17T19:00:00Z,"Cieszymy się i zapraszamy ponownie!",2025-09-17T20:00:00Z
+rev_A034,place_A_Restaurant,Restauracja 'Górski Smak',Ewa L.,5,"Pyszne, domowe ciasta. Kawa też bardzo dobra. Chwila relaksu.",2025-09-17T17:00:00Z,,
+rev_B057,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,1,"Zdjęcia na stronie to jedno, a rzeczywistość drugie. Pokój był klitką.",2025-09-17T15:00:00Z,,
+rev_B058,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,3,"Standardowy hotel sieciowy. Niczym nie zaskakuje, ale też nie rozczarowuje.",2025-09-16T20:00:00Z,,
+rev_A035,place_A_Restaurant,Restauracja 'Górski Smak',Tomasz J.,4,"Dobre jedzenie, ale w lokalu było bardzo głośno. Trudno było porozmawiać.",2025-09-16T18:00:00Z,,
+rev_B059,place_B_Hotel,Hotel 'Morski Widok',Magda S.,5,"Świetna lokalizacja, tuż przy plaży. Pokój z widokiem na morze - rewelacja!",2025-09-16T11:00:00Z,"Dziękujemy! Widok to nasz duży atut.",2025-09-16T12:00:00Z
+rev_A036,place_A_Restaurant,Restauracja 'Górski Smak',Magda S.,5,"",2025-09-16T09:00:00Z,,
+rev_B060,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,4,"Czysto, miło, profesjonalnie. Dobry wybór na wyjazd służbowy.",2025-09-15T15:00:00Z,,
+rev_B061,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,1,"*Brawo*. Poprosić o cichy pokój i dostać pokój nad wentylatorami kuchni. Gratuluję.",2025-09-15T10:00:00Z,"Najmocniej przepraszamy. Musiało dojść do pomyłki w systemie rezerwacji.",2025-09-15T11:00:00Z
+rev_A037,place_A_Restaurant,Restauracja 'Górski Smak',Jan M.,4,"Bardzo smaczny pstrąg. Ceny adekwatne do jakości. Polecam.",2025-09-14T19:00:00Z,,
+rev_B062,place_B_Hotel,Hotel 'Morski Widok',Jan M.,5,"Hotel godny polecenia. Czysto, spokojnie i bardzo smaczne śniadania.",2025-09-14T14:00:00Z,"Dziękujemy za polecenie!",2025-09-14T15:00:00Z
+rev_B063,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,2,"Zimno w pokoju! Ogrzewanie nie działało, a na prośbę o grzejnik dostałam odpowiedź 'zobaczymy'.",2025-09-13T21:00:00Z,"Przepraszamy, mieliśmy awarię. Powinna Pani otrzymać pomoc natychmiast.",2025-09-14T09:00:00Z
+rev_A038,place_A_Restaurant,Restauracja 'Górski Smak',Michał P.,5,"Jedzenie przepyszne! Obsługa bardzo miła i pomocna. Wystrój klimatyczny.",2025-09-13T20:00:00Z,,
+rev_B064,place_B_Hotel,Hotel 'Morski Widok',Michał P.,4,"Wszystko ok. Dobry standard, bez fajerwerków, ale solidnie.",2025-09-13T16:00:00Z,,
+rev_A039,place_A_Restaurant,Restauracja 'Górski Smak',Karolina D.,3,"Jedzenie zimne, obsługa niemiła. Kiedyś było lepiej.",2025-09-12T18:00:00Z,"Przykro nam, że jakość spadła w Pani oczach. Zbadamy sprawę.",2025-09-12T19:00:00Z
+rev_B065,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,5,"",2025-09-12T15:00:00Z,,
+rev_B066,place_B_Hotel,Hotel 'Morski Widok',Adam G.,4,"Lokalizacja super, pokój czysty. Śniadanie mogłoby być bardziej urozmaicone.",2025-09-11T13:00:00Z,,
+rev_A040,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,5,"Fantastyczne miejsce na mapie regionu. Polecam każdemu.",2025-09-11T11:00:00Z,"Dziękujemy za miłe słowa!",2025-09-11T12:00:00Z
+rev_B067,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,1,"Syf, kiła i mogiła. Karaluch w łazience. Uciekliśmy stamtąd.",2025-09-10T22:00:00Z,"To niemożliwe. Nasz hotel przechodzi regularne dezynsekcje. Prosimy o kontakt.",2025-09-11T09:00:00Z
+rev_B068,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,5,"Doskonały hotel. Warto dopłacić za widok na morze. Robi wrażenie.",2025-09-10T16:00:00Z,"Zgadzamy się, widok jest wyjątkowy!",2025-09-10T17:00:00Z
+rev_A041,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,4,"Solidna porcja, smaczne jedzenie. Idealne miejsce na obiad.",2025-09-10T14:00:00Z,,
+rev_B069,place_B_Hotel,Hotel 'Morski Widok',Monika C.,5,"Polecam! Czysto, pachnąco i bardzo miła obsługa. Wrócę.",2025-09-09T18:00:00Z,,
+rev_A042,place_A_Restaurant,Restauracja 'Górski Smak',Łukasz F.,2,"Nieświeża ryba. Reszty nie trzeba dodawać. Omijajcie.",2025-09-09T15:00:00Z,"To bardzo poważne oskarżenie. Nasze ryby są świeże. Prosimy o szczegóły.",2025-09-09T16:00:00Z
+rev_B070,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,4,"Dobry hotel w dobrej cenie. Śniadanie smaczne, duży wybór.",2025-09-08T17:00:00Z,,
+rev_B071,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,5,"Cudowne miejsce. Cisza, spokój, a jednocześnie wszędzie blisko.",2025-09-08T12:00:00Z,"Dziękujemy! Staramy się łączyć te dwie cechy.",2025-09-08T13:00:00Z
+rev_A043,place_A_Restaurant,Restauracja 'Górski Smak',Patrycja K.,5,"Klimat nie do podrobienia. Jedzenie pyszne. Polecam z całego serca.",2025-09-07T19:00:00Z,,
+rev_B072,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,2,"Ściany są z papieru. Słyszałem wszystko co działo się u sąsiadów.",2025-09-07T15:00:00Z,,
+rev_A044,place_A_Restaurant,Restauracja 'Górski Smak',Anna Z.,4,"Porcje ogromne! Jedzenie bardzo smaczne, typowo domowe.",2025-09-06T20:00:00Z,"Dziękujemy! Nasza kuchnia stawia na tradycję.",2025-09-07T09:00:00Z
+rev_B073,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,5,"",2025-09-06T18:00:00Z,,
+rev_B074,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,4,"Generalnie na plus. Miła obsługa, czysty pokój. Tylko ten parking drogi.",2025-09-06T11:00:00Z,,
+rev_A045,place_A_Restaurant,Restauracja 'Górski Smak',Piotr W.,3,"Kiedyś było smaczniej. Teraz to masówka. Szkoda.",2025-09-05T17:00:00Z,,
+rev_B075,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,5,"Najlepszy hotel w jakim byłam nad polskim morzem. Standard europejski.",2025-09-05T10:00:00Z,"Bardzo nam miło to słyszeć! Dziękujemy.",2025-09-05T11:00:00Z
+rev_B076,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,2,"Zimna woda w basenie. Dzieci nie chciały wejść. A to był główny powód wyboru.",2025-09-04T16:00:00Z,"Przykro nam, temperatura wody jest stała i zgodna z normami. ",2025-09-04T17:00:00Z
+rev_A046,place_A_Restaurant,Restauracja 'Górski Smak',Tomasz J.,5,"Doskonała kaczka. Palce lizać. Obsługa na medal.",2025-09-04T14:00:00Z,,
+rev_B077,place_B_Hotel,Hotel 'Morski Widok',Magda S.,5,"Polecam! Czysto, miło i profesjonalnie. Wrócę.",2025-09-03T20:00:00Z,"Zapraszamy!",2025-09-04T09:00:00Z
+rev_A047,place_A_Restaurant,Restauracja 'Górski Smak',Magda S.,4,"Miejsce z klimatem, jedzenie dobre. Idealne na randkę.",2025-09-03T18:00:00Z,,
+rev_B078,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,4,"Wszystko ok, ale śniadania monotonne. Codziennie to samo.",2025-09-03T11:00:00Z,,
+rev_B079,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,5,"Rewelacyjna lokalizacja, czystość na błysk. Bardzo wygodne łóżka.",2025-09-02T16:00:00Z,"Dziękujemy!",2025-09-02T17:00:00Z
+rev_A048,place_A_Restaurant,Restauracja 'Górski Smak',Agnieszka T.,1,"Tragedia. Ceny z sufitu, jedzenie mrożone. Nigdy więcej.",2025-09-02T14:00:00Z,"To niemożliwe, nasze produkty są świeże. Prosimy o kontakt.",2025-09-02T15:00:00Z
+rev_B080,place_B_Hotel,Hotel 'Morski Widok',Jan M.,3,"Pokój był OK, ale obsługa w restauracji hotelowej była bardzo powolna.",2025-09-01T20:00:00Z,,
+rev_B081,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Fantastyczne miejsce! Piękny wystrój, przemiła obsługa. Polecam!",2025-09-01T15:00:00Z,"Dziękujemy za tak miłe słowa!",2025-09-01T16:00:00Z
+rev_A049,place_A_Restaurant,Restauracja 'Górski Smak',Zofia N.,5,"Pyszny, domowy obiad. Czuć, że gotowane z sercem.",2025-09-01T13:00:00Z,,
+rev_B082,place_B_Hotel,Hotel 'Morski Widok',Michał P.,2,"Recepcja nie potrafiła odpowiedzieć na proste pytania. Brak kompetencji.",2025-08-31T18:00:00Z,"Przeprowadzimy dodatkowe szkolenia. Przepraszamy.",2025-09-01T09:00:00Z
+rev_A050,place_A_Restaurant,Restauracja 'Górski Smak',Karolina D.,4,"Dobre jedzenie, ale bardzo tłoczno. Lepiej rezerwować stolik.",2025-08-31T16:00:00Z,,
+rev_B083,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,4,"Hotel bardzo ładny, ale strefa spa była rozczarowująca. Małe jacuzzi.",2025-08-30T19:00:00Z,,
+rev_B084,place_B_Hotel,Hotel 'Morski Widok',Adam G.,5,"Pełen profesjonalizm. Hotel na najwyższym poziomie.",2025-08-30T14:00:00Z,"Dziękujemy za docenienie!",2025-08-30T15:00:00Z
+rev_A051,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,3,"",2025-08-30T12:00:00Z,,
+rev_B085,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,2,"",2025-08-29T17:00:00Z,,
+rev_A052,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,5,"Niesamowity klimat, pyszne jedzenie. Czego chcieć więcej?",2025-08-29T15:00:00Z,"Dziękujemy i zapraszamy!",2025-08-29T16:00:00Z
+rev_B086,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,1,"Brudna pościel! Zgłosiłem to i dostałem nową, ale niesmak pozostał.",2025-08-28T21:00:00Z,"To niedopuszczalne. Natychmiast zbadamy tę sprawę.",2025-08-29T09:00:00Z
+rev_B087,place_B_Hotel,Hotel 'Morski Widok',Monika C.,5,"Świetny hotel dla rodzin z dziećmi. Dużo atrakcji, animacje.",2025-08-28T16:00:00Z,"Cieszymy się, że najmłodsi goście byli zadowoleni!",2025-08-28T17:00:00Z
+rev_A053,place_A_Restaurant,Restauracja 'Górski Smak',Monika C.,2,"Kelnerka była nieuprzejma i obrażona. Zepsuła nam cały wieczór.",2025-08-28T14:00:00Z,"Bardzo przepraszamy za takie zachowanie. Porozmawiamy z pracownikiem.",2025-08-28T15:00:00Z
+rev_B088,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,5,"Polecam. Czysto, nowocześnie, dobra cena.",2025-08-27T19:00:00Z,,
+rev_A054,place_A_Restaurant,Restauracja 'Górski Smak',Patrycja K.,5,"Pyszna szarlotka z lodami. Warto było czekać w kolejce.",2025-08-27T17:00:00Z,,
+rev_B089,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,3,"Hotel jest OK, ale nic specjalnego. Stosunek jakości do ceny - średni.",2025-08-27T15:00:00Z,,
+rev_B090,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,4,"",2025-08-26T20:00:00Z,,
+rev_A055,place_A_Restaurant,Restauracja 'Górski Smak',Marcin K.,4,"Smacznie i regionalnie. Duży plus za lokalne piwo.",2025-08-26T18:00:00Z,,
+rev_B091,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,1,"Rezerwacja anulowana na dzień przed przyjazdem bez powodu. Zostałem na lodzie.",2025-08-26T12:00:00Z,"Prosimy o pilny kontakt, musimy to wyjaśnić. To nie jest nasza standardowa procedura.",2025-08-26T13:00:00Z
+rev_B092,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,5,"Bardzo komfortowy pokój. Świetna lokalizacja przy samej plaży.",2025-08-25T16:00:00Z,"Dziękujemy, lokalizacja to nasz duży plus!",2025-08-25T17:00:00Z
+rev_A056,place_A_Restaurant,Restauracja 'Górski Smak',Piotr W.,5,"Najlepsza kwaśnica w moim życiu. Serio!",2025-08-25T14:00:00Z,,
+rev_B093,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,4,"Miła obsługa, smaczne śniadania. Pokoje mogłyby być lepiej wyciszone.",2025-08-24T19:00:00Z,,
+rev_A057,place_A_Restaurant,Restauracja 'Górski Smak',Ewa L.,2,"Długi czas oczekiwania, a jedzenie zimne. Nie polecam.",2025-08-24T17:00:00Z,,
+rev_B094,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,5,"Wszystko było idealnie. Dziękujemy za wspaniały pobyt.",2025-08-24T11:00:00Z,"Cała przyjemność po naszej stronie!",2025-08-24T12:00:00Z
+rev_B095,place_B_Hotel,Hotel 'Morski Widok',Magda S.,4,"Hotel zadbany, czysty. Obsługa na recepcji bardzo pomocna.",2025-08-23T16:00:00Z,,
+rev_A058,place_A_Restaurant,Restauracja 'Górski Smak',Krzysztof B.,3,"Jadłem lepsze placki po węgiersku. Były trochę za tłuste.",2025-08-23T14:00:00Z,,
+rev_B096,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,1,"Naciągacze. Ukryte opłaty za wszystko. Nawet za ręcznik na basen.",2025-08-22T20:00:00Z,"Wszystkie opłaty są wyszczególnione w regulaminie. Przykro nam, jeśli coś było niejasne.",2025-08-23T09:00:00Z
+rev_A059,place_A_Restaurant,Restauracja 'Górski Smak',Agnieszka T.,5,"Super miejsce! Klimat, jedzenie, obsługa - wszystko na 5!",2025-08-22T18:00:00Z,"Dziękujemy za 5!",2025-08-22T19:00:00Z
+rev_B097,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,5,"Polecam z całego serca. Czysto, nowocześnie i piękne widoki.",2025-08-22T13:00:00Z,,
+rev_B098,place_B_Hotel,Hotel 'Morski Widok',Jan M.,4,"Dobry hotel, ale w restauracji hotelowej ceny z kosmosu.",2025-08-21T19:00:00Z,,
+rev_A060,place_A_Restaurant,Restauracja 'Górski Smak',Jan M.,4,"Smaczny żurek, porcja solidna. Polecam.",2025-08-21T17:00:00Z,,
+rev_B099,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Komfort i luksus. Warto było. Wrócę.",2025-08-21T12:00:00Z,"Zapraszamy!",2025-08-21T13:00:00Z
+rev_B100,place_B_Hotel,Hotel 'Morski Widok',Michał P.,3,"",2025-08-20T16:00:00Z,,
+rev_A061,place_A_Restaurant,Restauracja 'Górski Smak',Michał P.,5,"Fantastyczny pstrąg. Świeży i idealnie doprawiony.",2025-08-20T14:00:00Z,,
+rev_B101,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,2,"Obsługa na śniadaniu była niemiła i patrzyła na zegarek. Czuliśmy się jak intruzi.",2025-08-19T10:00:00Z,"Przepraszamy za zachowanie personelu. Zwrócimy na to uwagę.",2025-08-19T11:00:00Z
+rev_B102,place_B_Hotel,Hotel 'Morski Widok',Adam G.,5,"Hotel na światowym poziomie. Serwis, pokoje, lokalizacja - wszystko idealne.",2025-08-18T17:00:00Z,"Dziękujemy za tak wysoką ocenę!",2025-08-18T18:00:00Z
+rev_A062,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,1,"*Brawo*. Zamówiłem bez cebuli, dostałem z podwójną. Kucharz chyba umie czytać.",2025-08-18T15:00:00Z,"Najmocniej przepraszamy za pomyłkę kuchni. To nie powinno się zdarzyć.",2025-08-18T16:00:00Z
+rev_B103,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,4,"Bardzo fajne miejsce. Czysto, cicho. Mały minus za brak czajnika w pokoju.",2025-08-17T20:00:00Z,,
+rev_A063,place_A_Restaurant,Restauracja 'Górski Smak',Natalia R.,4,"Dobre jedzenie, miła atmosfera. Warto odwiedzić.",2025-08-17T18:00:00Z,,
+rev_B104,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,5,"Super hotel. Basen robi robotę. Dzieciaki zachwycone.",2025-08-17T13:00:00Z,,
+rev_A064,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,3,"Przeciętne jedzenie. Spodziewałem się czegoś więcej po opiniach.",2025-08-17T11:00:00Z,,
+rev_B105,place_B_Hotel,Hotel 'Morski Widok',Monika C.,2,"Pokój był sprzątany 'po łebkach'. Kurz na meblach, plamy na lustrze.",2025-08-16T16:00:00Z,"Przykro nam. Zgłosimy to do kierownika piętra.",2025-08-16T17:00:00Z
+rev_B106,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,5,"",2025-08-15T19:00:00Z,,
+rev_A065,place_A_Restaurant,Restauracja 'Górski Smak',Łukasz F.,5,"Poezja smaku! Kucharz jest artystą. Polecam.",2025-08-15T17:00:00Z,"Dziękujemy! Przekażemy szefowi kuchni!",2025-08-15T18:00:00Z
+rev_B107,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,1,"Tragedia. Hałas, brud i smród. Zdjęcia na Booking to kłamstwo.",2025-08-14T22:00:00Z,"Jesteśmy zszokowani tą opinią. Czy na pewno ocenia Pani nasz hotel?",2025-08-15T09:00:00Z
+rev_A066,place_A_Restaurant,Restauracja 'Górski Smak',Marcin K.,4,"Bardzo dobra golonka. Porcja nie do przejedzenia.",2025-08-14T20:00:00Z,,
+rev_B108,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,5,"Wszystko super, polecam.",2025-08-14T18:00:00Z,,
+rev_B109,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,3,"Lokalizacja OK, ale hotel wymaga remontu. Widać ząb czasu.",2025-08-13T16:00:00Z,,
+rev_A067,place_A_Restaurant,Restauracja 'Górski Smak',Anna Z.,5,"Najlepsze pierogi w mieście. Świeże, pyszne nadzienie.",2025-08-13T14:00:00Z,"Dziękujemy! Pierogi to nasza duma.",2025-08-13T15:00:00Z
+rev_B110,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,4,"Wygodne łóżko, szybki internet, dobre śniadanie. Spełnił moje oczekiwania.",2025-08-12T19:00:00Z,,
+rev_A068,place_A_Restaurant,Restauracja 'Górski Smak',Piotr W.,2,"Kelner był opryskliwy. Poprosiłem o zmianę stolika, to przewrócił oczami.",2025-08-12T17:00:00Z,"To niedopuszczalne. Przeprowadzimy rozmowę z pracownikiem.",2025-08-12T18:00:00Z
+rev_B111,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,5,"Piękny hotel, wspaniała obsługa. Czułam się dopieszczona.",2025-08-11T21:00:00Z,"Bardzo nam miło! Dziękujemy!",2025-08-12T09:00:00Z
+rev_B112,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,1,"Oszuści. Zapłaciłem za pokój z widokiem na morze, dostałem na parking. 'Brak wolnych pokoi'.",2025-08-11T16:00:00Z,"Bardzo przepraszamy, musiał nastąpić błąd przy rezerwacji. Prosimy o kontakt.",2025-08-11T17:00:00Z
+rev_A069,place_A_Restaurant,Restauracja 'Górski Smak',Tomasz J.,4,"Dobre, tradycyjne jedzenie. Ceny rozsądne.",2025-08-11T14:00:00Z,,
+rev_B113,place_B_Hotel,Hotel 'Morski Widok',Magda S.,5,"Czysto, miło i profesjonalnie. Hotel godny polecenia.",2025-08-10T18:00:00Z,,
+rev_A070,place_A_Restaurant,Restauracja 'Górski Smak',Krzysztof B.,5,"Miejsce z duszą. Wspaniała obsługa i jeszcze lepsze jedzenie.",2025-08-10T16:00:00Z,"Dziękujemy za miłe słowa!",2025-08-10T17:00:00Z
+rev_B114,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,4,"",2025-08-10T14:00:00Z,,
+rev_B115,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,2,"Śniadanie bardzo słabe. Mały wybór, wszystko zimne.",2025-08-09T11:00:00Z,,
+rev_A071,place_A_Restaurant,Restauracja 'Górski Smak',Agnieszka T.,5,"Pstrąg z grilla - mistrzostwo! Świeży, idealnie wypieczony. Polecam.",2025-08-08T19:00:00Z,"Staramy się! Nasz pstrąg pochodzi z lokalnej hodowli.",2025-08-08T20:00:00Z
+rev_B116,place_B_Hotel,Hotel 'Morski Widok',Jan M.,5,"Rewelacyjna lokalizacja. Wszędzie na piechotę. Pokoje ciche.",2025-08-08T15:00:00Z,,
+rev_B117,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,4,"Pobyt udany. Mały minus za słabo działającą klimatyzację.",2025-08-07T18:00:00Z,"Sprawdzimy klimatyzację w tym pokoju. Dziękujemy za sygnał.",2025-08-08T09:00:00Z
+rev_A072,place_A_Restaurant,Restauracja 'Górski Smak',Zofia N.,3,"Zwykłe jedzenie. Nic specjalnego, a ceny wysokie.",2025-08-07T16:00:00Z,,
+rev_B118,place_B_Hotel,Hotel 'Morski Widok',Michał P.,5,"Polecam! Czysto, pachnąco, obsługa uśmiechnięta.",2025-08-06T20:00:00Z,,
+rev_A073,place_A_Restaurant,Restauracja 'Górski Smak',Michał P.,5,"Klimatyczne miejsce, pyszne jedzenie, miła obsługa. Czego chcieć więcej?",2025-08-06T18:00:00Z,"Dziękujemy!",2025-08-06T19:00:00Z
+rev_B119,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,1,"Nie polecam. Hałas za oknem uniemożliwiał sen. Recepcja bezradna.",2025-08-06T12:00:00Z,,
+rev_B120,place_B_Hotel,Hotel 'Morski Widok',Adam G.,4,"Dobry hotel biznesowy. Szybki check-in, czysto, dobre wi-fi.",2025-08-05T17:00:00Z,"Dziękujemy za opinię!",2025-08-05T18:00:00Z
+rev_A074,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,4,"Smaczna zupa grzybowa. Warto spróbować.",2025-08-05T15:00:00Z,,
+rev_B121,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,5,"Wspaniały hotel! Obsługa na recepcji przemiła i bardzo pomocna.",2025-08-04T19:00:00Z,"Przekażemy pochwały! Dziękujemy!",2025-08-05T09:00:00Z
+rev_B122,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,2,"Pokój wyglądał zupełnie inaczej niż na zdjęciach. Był stary i zniszczony.",2025-08-04T14:00:00Z,,
+rev_A075,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,5,"",2025-08-04T12:00:00Z,,
+rev_B123,place_B_Hotel,Hotel 'Morski Widok',Monika C.,5,"Najlepszy hotel w tej cenie. Czysto, smaczne śniadania, świetna lokalizacja.",2025-08-03T16:00:00Z,"Bardzo nam miło!",2025-08-03T17:00:00Z
+rev_A076,place_A_Restaurant,Restauracja 'Górski Smak',Monika C.,4,"Dobra kwaśnica, ale schabowy mógłby być lepszy. Ogólnie na plus.",2025-08-03T14:00:00Z,,
+rev_B124,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,3,"Przeciętny. Winda wolna, a w pokoju brakowało podstawowych rzeczy jak mydło.",2025-08-02T20:00:00Z,"Przepraszamy za niedopatrzenie serwisu sprzątającego.",2025-08-03T09:00:00Z
+rev_B125,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,5,"Gorąco polecam. Standard na 5 gwiazdek.",2025-08-02T15:00:00Z,,
+rev_A077,place_A_Restaurant,Restauracja 'Górski Smak',Patrycja K.,5,"Pyszne jedzenie, zwłaszcza placki ziemniaczane. Wracam tu co roku.",2025-08-02T13:00:00Z,"Cieszymy się, że jest Pani naszą stałą klientką!",2025-08-02T14:00:00Z
+rev_B126,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,4,"",2025-08-01T18:00:00Z,,
+rev_A078,place_A_Restaurant,Restauracja 'Górski Smak',Marcin K.,1,"Czekałem na jedzenie godzinę. Dostałem zimne. Kelner mnie zignorował.",2025-08-01T16:00:00Z,"To karygodne. Prosimy o kontakt, musimy to wyjaśnić.",2025-08-01T17:00:00Z
+rev_B127,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,5,"Idealne miejsce na odpoczynek. Cicho, spokojnie, piękne widoki.",2025-07-31T20:00:00Z,,
+rev_B128,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,2,"Śniadanie było koszmarne. Jajecznica z proszku, zimne parówki.",2025-07-31T11:00:00Z,"Przykro nam, nasze śniadania są zwykle chwalone. Sprawdzimy to.",2025-07-31T12:00:00Z
+rev_A079,place_A_Restaurant,Restauracja 'Górski Smak',Piotr W.,5,"Pyszne, regionalne jedzenie. Obsługa bardzo miła. Polecam.",2025-07-30T19:00:00Z,,
+rev_B129,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,4,"Hotel warty polecenia. Dobra jakość w rozsądnej cenie.",2025-07-30T15:00:00Z,,
+rev_A080,place_A_Restaurant,Restauracja 'Górski Smak',Tomasz J.,4,"Duże porcje, smaczne jedzenie. Trochę tłoczno, ale warto.",2025-07-29T18:00:00Z,"Dziękujemy! W sezonie bywa tłoczno.",2025-07-29T19:00:00Z
+rev_B130,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,5,"Wszystko super. Hotel nowy, czysty, obsługa na 5+.",2025-07-29T14:00:00Z,,
+rev_B131,place_B_Hotel,Hotel 'Morski Widok',Magda S.,2,"Pokój nie był gotowy na czas. Czekałam 2 godziny w lobby. Słaby początek.",2025-07-28T17:00:00Z,"Przepraszamy za opóźnienie. Mieliśmy problem kadrowy.",2025-07-28T18:00:00Z
+rev_A081,place_A_Restaurant,Restauracja 'Górski Smak',Magda S.,3,"Jedzenie OK, ale nic specjalnego. Wystrój jak z lat 90-tych.",2025-07-28T15:00:00Z,,
+rev_B132,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,5,"Fantastyczna lokalizacja, tuż przy molo. Pokoje nowoczesne.",2025-07-27T20:00:00Z,,
+rev_A082,place_A_Restaurant,Restauracja 'Górski Smak',Krzysztof B.,5,"Obsługa na najwyższym poziomie. Kelner doradził nam świetne wino. Poezja.",2025-07-27T18:00:00Z,"Cieszymy się, że mogliśmy doradzić!",2025-07-27T19:00:00Z
+rev_B133,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,4,"Bardzo miła obsługa. Pokój czysty, choć łazienka mała.",2025-07-26T21:00:00Z,,
+rev_B134,place_B_Hotel,Hotel 'Morski Widok',Jan M.,1,"Ktoś ukradł mi z pokoju słuchawki. Hotel umywa ręce. Skandal.",2025-07-26T15:00:00Z,"Sprawa została zgłoszona na policję. Współpracujemy w pełni.",2025-07-26T16:00:00Z
+rev_A083,place_A_Restaurant,Restauracja 'Górski Smak',Jan M.,4,"Dobra golonka, ale piwo było ciepłe. Mały zgrzyt.",2025-07-26T13:00:00Z,,
+rev_B135,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Piękny hotel. Warto. Śniadania pyszne.",2025-07-25T17:00:00Z,"Dziękujemy!",2025-07-25T18:00:00Z
+rev_A084,place_A_Restaurant,Restauracja 'Górski Smak',Zofia N.,5,"Cudowny klimat. Kominek, pyszne jedzenie. Polecam.",2025-07-25T15:00:00Z,,
+rev_B136,place_B_Hotel,Hotel 'Morski Widok',Michał P.,4,"Wszystko w porządku. Hotel spełnił oczekiwania.",2025-07-24T19:00:00Z,,
+rev_A085,place_A_Restaurant,Restauracja 'Górski Smak',Karolina D.,2,"",2025-07-24T17:00:00Z,,
+rev_B137,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,5,"Świetny basen. Dzieci nie chciały wyjść. Pokoje rodzinne duże i wygodne.",2025-07-23T20:00:00Z,"Super! Cieszymy się, że basen się podobał.",2025-07-24T09:00:00Z
+rev_B138,place_B_Hotel,Hotel 'Morski Widok',Adam G.,3,"Hotel jest OK, ale cena jest mocno zawyżona jak na ten standard.",2025-07-23T16:00:00Z,,
+rev_A086,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,4,"Smacznie, ale tłoczno. Lepiej przyjść poza godzinami szczytu.",2025-07-23T14:00:00Z,,
+rev_B139,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,5,"Perfekcyjna obsługa. Od recepcji po panie sprzątające. Wszyscy mili.",2025-07-22T18:00:00Z,"Przekażemy pochwały całemu zespołowi!",2025-07-22T19:00:00Z
+rev_A087,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,1,"Zamówiłem pstrąga, dostałem dorsza. Kelner twierdził, że się nie znam. Żenada.",2025-07-22T16:00:00Z,"Absolutnie niedopuszczalne. Przepraszamy za zachowanie kelnera.",2025-07-22T17:00:00Z
+rev_B140,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,4,"Dobry hotel. Czysto, spokojnie. Śniadania smaczne.",2025-07-21T21:00:00Z,,
+rev_B141,place_B_Hotel,Hotel 'Morski Widok',Monika C.,5,"Polecam! Piękny pokój z ogromnym tarasem. Widok na morze - rewelacja.",2025-07-21T15:00:00Z,"Dziękujemy! Tarasy to nasza duma.",2025-07-21T16:00:00Z
+rev_A088,place_A_Restaurant,Restauracja 'Górski Smak',Monika C.,5,"Pyszne jedzenie, świetna atmosfera. Polecam.",2025-07-21T13:00:00Z,,
+rev_B142,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,2,"Hotel ma potencjał, ale jest źle zarządzany. Brudno, obsługa niemiła.",2025-07-20T19:00:00Z,,
+rev_A089,place_A_Restaurant,Restauracja 'Górski Smak',Łukasz F.,4,"Dobre regionalne piwo i smaczne przekąski. Fajne miejsce.",2025-07-20T17:00:00Z,,
+rev_B143,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,5,"Wszystko na najwyższym poziomie. Bez zarzutu.",2025-07-19T22:00:00Z,"Dziękujemy za 5 gwiazdek!",2025-07-20T09:00:00Z
+rev_A090,place_A_Restaurant,Restauracja 'Górski Smak',Patrycja K.,5,"Klimat, jedzenie, obsługa - 10/10. Polecam.",2025-07-19T20:00:00Z,,
+rev_B144,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,3,"",2025-07-19T15:00:00Z,,
+rev_B145,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,4,"Przyjemny hotel. Dobra baza wypadowa do zwiedzania.",2025-07-18T18:00:00Z,,
+rev_A091,place_A_Restaurant,Restauracja 'Górski Smak',Anna Z.,1,"*Świetnie*. Zamówiłem stolik przy oknie, dostałem przy toalecie. Bo 'był zajęty'.",2025-07-18T16:00:00Z,"Przepraszamy za niedogodność. Staramy się spełniać prośby, ale nie zawsze jest to możliwe.",2025-07-18T17:00:00Z
+rev_B146,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,5,"Doskonały hotel. Czysto, cicho, idealnie.",2025-07-17T21:00:00Z,,
+rev_B147,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,2,"Pokój był bardzo głośny. Słychać było każdą rozmowę z korytarza.",2025-07-17T15:00:00Z,,
+rev_A092,place_A_Restaurant,Restauracja 'Górski Smak',Ewa L.,5,"Pyszne ciasta domowej roboty. Kawa mrożona też super.",2025-07-17T13:00:00Z,"Dziękujemy!",2025-07-17T14:00:00Z
+rev_B148,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,4,"Bardzo dobry hotel. Jedyny minus to płatny basen dla gości.",2025-07-16T19:00:00Z,"Dziękujemy za opinię. Basen jest zarządzany przez zewnętrzną firmę, stąd opłaty.",2025-07-17T09:00:00Z
+rev_A093,place_A_Restaurant,Restauracja 'Górski Smak',Tomasz J.,4,"Smacznie, szybko, w rozsądnej cenie. Czego chcieć więcej?",2025-07-16T17:00:00Z,,
+rev_B149,place_B_Hotel,Hotel 'Morski Widok',Magda S.,5,"Czystość na błysk. Pokoje pachnące, łazienka lśniąca.",2025-07-15T22:00:00Z,"Dziękujemy! Czystość to nasz priorytet.",2025-07-16T09:00:00Z
+rev_B150,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,3,"Hotel OK, ale obsługa na śniadaniu nie nadążała. Brudne stoliki, brakowało jedzenia.",2025-07-15T10:00:00Z,"Przepraszamy za poranny chaos. Mieliśmy pełne obłożenie.",2025-07-15T11:00:00Z
+rev_A094,place_A_Restaurant,Restauracja 'Górski Smak',Krzysztof B.,1,"Nie polecam. Włos w jedzeniu. Kucharz powinien nosić siatkę.",2025-07-14T20:00:00Z,"Przerażające. Bardzo przepraszamy, to niedopuszczalne.",2025-07-14T21:00:00Z
+rev_B151,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,5,"Wspaniały pobyt. Na pewno wrócimy.",2025-07-14T16:00:00Z,,
+rev_A095,place_A_Restaurant,Restauracja 'Górski Smak',Agnieszka T.,5,"Pyszne jedzenie, wspaniały klimat. Polecam!",2025-07-14T14:00:00Z,,
+rev_B152,place_B_Hotel,Hotel 'Morski Widok',Jan M.,4,"Pokój był duży i wygodny. Trochę głośna klimatyzacja, ale dało się wytrzymać.",2025-07-13T19:00:00Z,,
+rev_B153,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Idealne miejsce. Obsługa na recepcji jest po prostu fantastyczna!",2025-07-12T20:00:00Z,"Przekażemy pochwały! Dziękujemy!",2025-07-13T09:00:00Z
+rev_A096,place_A_Restaurant,Restauracja 'Górski Smak',Zofia N.,4,"Dobre placki po węgiersku, ale sos był trochę za słony.",2025-07-12T18:00:00Z,,
+rev_B154,place_B_Hotel,Hotel 'Morski Widok',Michał P.,1,"*Fantastycznie*. Winda nie działa, a ja mam pokój na 6 piętrze. Super urlop.",2025-07-12T15:00:00Z,"Najmocniej przepraszamy za awarię. Serwis już nad tym pracuje.",2025-07-12T16:00:00Z
+rev_A097,place_A_Restaurant,Restauracja 'Górski Smak',Michał P.,5,"Polecam! Jedzenie pyszne, obsługa szybka i miła.",2025-07-12T13:00:00Z,,
+rev_B155,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,4,"Hotel bardzo czysty, pokoje sprzątane codziennie. Duży plus.",2025-07-11T17:00:00Z,,
+rev_B156,place_B_Hotel,Hotel 'Morski Widok',Adam G.,5,"Doskonała lokalizacja. Wszędzie blisko, a hotel cichy.",2025-07-10T21:00:00Z,,
+rev_A098,place_A_Restaurant,Restauracja 'Górski Smak',Adam G.,3,"Drogo. Jedzenie smaczne, ale ceny nieadekwatne do miejsca.",2025-07-10T19:00:00Z,,
+rev_B157,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,2,"Internet działał tak wolno, że nie dało się pracować. A miał być 'szybki'.",2025-07-10T12:00:00Z,"Przepraszamy, sprawdzimy router na Pani piętrze.",2025-07-10T13:00:00Z
+rev_B158,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,5,"Świetny hotel. Pokoje duże, czyste, obsługa pomocna. Polecam.",2025-07-09T16:00:00Z,,
+rev_A099,place_A_Restaurant,Restauracja 'Górski Smak',Grzegorz H.,4,"Dobra, regionalna kuchnia. Warto spróbować.",2025-07-09T14:00:00Z,,
+rev_B159,place_B_Hotel,Hotel 'Morski Widok',Monika C.,4,"",2025-07-08T19:00:00Z,,
+rev_A100,place_A_Restaurant,Restauracja 'Górski Smak',Monika C.,5,"Najlepsze pierogi, jakie jadłam. Ciasto cieniutkie, farsz idealny.",2025-07-08T17:00:00Z,"Dziękujemy! Wkładamy w nie całe serce.",2025-07-08T18:00:00Z
+rev_B160,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,1,"Zimna woda pod prysznicem rano. Recepcja twierdzi, że 'tak musi być'.",2025-07-08T10:00:00Z,"To oczywiście nieprawda. Musiała to być awaria. Przepraszamy.",2025-07-08T11:00:00Z
+rev_B161,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,5,"Wszystko super! Polecam z czystym sumieniem.",2025-07-07T16:00:00Z,"Dziękujemy!",2025-07-07T17:00:00Z
+rev_B162,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,5,"Doskonały hotel na wyjazd służbowy. Cicho, szybko, sprawnie.",2025-07-06T20:00:00Z,,
+rev_B163,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,4,"Hotel bardzo ładny. Mały minus za dodatkowo płatne spa.",2025-07-06T15:00:00Z,,
+rev_B164,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,1,"*Rewelacja*. Parking za 100 zł za dobę. Chyba ze złota jest ta kostka brukowa.",2025-07-05T18:00:00Z,"Ceny parkingu są podyktowane lokalizacją i ograniczoną liczbą miejsc. Przykro nam.",2025-07-05T19:00:00Z
+rev_B165,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,5,"Cudowne miejsce. Obsługa na najwyższym poziomie. Wrócę.",2025-07-04T21:00:00Z,"Zapraszamy serdecznie!",2025-07-05T09:00:00Z
+rev_B166,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,3,"Nic specjalnego. Hotel jak tysiące innych.",2025-07-04T16:00:00Z,,
+rev_B167,place_B_Hotel,Hotel 'Morski Widok',Magda S.,5,"Piękny pokój, wygodne łóżko, pyszne śniadanie. Czego chcieć więcej?",2025-07-03T20:00:00Z,"Dziękujemy za 5 gwiazdek!",2025-07-04T09:00:00Z
+rev_B168,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,4,"Polecam. Dobry standard, czysto. Śniadanie smaczne.",2025-07-03T14:00:00Z,,
+rev_B169,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,2,"Pokój był nieposprzątany po poprzednich gościach. Musiałam interweniować.",2025-07-02T17:00:00Z,"To niedopuszczalne. Najmocniej przepraszamy za błąd.",2025-07-02T18:00:00Z
+rev_B170,place_B_Hotel,Hotel 'Morski Widok',Jan M.,5,"Świetny hotel. Lokalizacja idealna, obsługa przemiła.",2025-07-01T19:00:00Z,,
+rev_B171,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,4,"Bardzo fajny hotel. Mały minus za głośną klimatyzację.",2025-06-30T22:00:00Z,,
+rev_B172,place_B_Hotel,Hotel 'Morski Widok',Michał P.,1,"Nie polecam. Hałas, brudno. Daleko od zdjęć.",2025-06-30T15:00:00Z,"Przykro nam, że ma Pan takie odczucia.",2025-06-30T16:00:00Z
+rev_B173,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,5,"Wszystko super. Hotel piękny, obsługa na medal.",2025-06-29T18:00:00Z,,
+rev_B174,place_B_Hotel,Hotel 'Morski Widok',Adam G.,4,"Dobry hotel, ale śniadania mogłyby być lepsze. Mały wybór.",2025-06-29T11:00:00Z,,
+rev_B175,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,5,"Polecam! Czysto, nowocześnie i wspaniały widok na morze.",2025-06-28T16:00:00Z,"Dziękujemy!",2025-06-28T17:00:00Z
+rev_B176,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,2,"Obsługa recepcji była obrażona, że o coś pytam. Żenada.",2025-06-27T20:00:00Z,"Bardzo przepraszamy, przeprowadzimy rozmowę z personelem.",2025-06-28T09:00:00Z
+rev_B177,place_B_Hotel,Hotel 'Morski Widok',Monika C.,5,"Hotel na 5+. Czysto, miło, pyszne jedzenie.",2025-06-27T15:00:00Z,,
+rev_B178,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,4,"Wszystko ok. Dobry standard za rozsądną cenę.",2025-06-26T19:00:00Z,,
+rev_B179,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,1,"Pokój był tak brudny, że poprosiłam o zwrot pieniędzy. Omijać.",2025-06-26T14:00:00Z,"Jesteśmy zszokowani. Prosimy o kontakt w celu wyjaśnienia.",2025-06-26T15:00:00Z
+rev_B180,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,5,"Polecam! Czysto i komfortowo.",2025-06-25T17:00:00Z,,
+rev_B181,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,3,"Średnio. Hotel ma swoje lata i to widać.",2025-06-24T20:00:00Z,,
+rev_B182,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,5,"Wszystko idealnie. Obsługa, pokój, lokalizacja. 10/10.",2025-06-24T15:00:00Z,"Dziękujemy za 10/10!",2025-06-24T16:00:00Z
+rev_B183,place_B_Hotel,Hotel 'Morski Widok',Ewa L.,4,"Fajny hotel, ale śniadania mogłyby być smaczniejsze.",2025-06-23T19:00:00Z,,
+rev_B184,place_B_Hotel,Hotel 'Morski Widok',Tomasz J.,2,"Głośno. Słychać wszystko z korytarza i sąsiednich pokoi.",2025-06-23T12:00:00Z,,
+rev_B185,place_B_Hotel,Hotel 'Morski Widok',Magda S.,5,"Piękny hotel, wspaniałe spa. Polecam na relaks.",2025-06-22T17:00:00Z,"Cieszymy się, że strefa SPA spełniła oczekiwania!",2025-06-22T18:00:00Z
+rev_B186,place_B_Hotel,Hotel 'Morski Widok',Krzysztof B.,4,"Dobry hotel, ale brak parkingu to duży minus.",2025-06-21T21:00:00Z,"Niestety, lokalizacja w centrum ma swoje ograniczenia.",2025-06-22T09:00:00Z
+rev_B187,place_B_Hotel,Hotel 'Morski Widok',Agnieszka T.,5,"Wszystko super!",2025-06-21T15:00:00Z,,
+rev_B188,place_B_Hotel,Hotel 'Morski Widok',Jan M.,3,"Pokój OK, ale obsługa w restauracji bardzo wolna.",2025-06-20T20:00:00Z,,
+rev_B189,place_B_Hotel,Hotel 'Morski Widok',Zofia N.,5,"Polecam. Hotel na wysokim poziomie.",2025-06-20T14:00:00Z,,
+rev_B190,place_B_Hotel,Hotel 'Morski Widok',Michał P.,4,"Miła obsługa, czysty pokój. Polecam.",2025-06-19T18:00:00Z,,
+rev_B191,place_B_Hotel,Hotel 'Morski Widok',Karolina D.,1,"Brudna łazienka. To niedopuszczalne w hotelu tej klasy.",2025-06-19T12:00:00Z,"Najmocniej przepraszamy. Zgłosimy to do serwisu sprzątającego.",2025-06-19T13:00:00Z
+rev_B192,place_B_Hotel,Hotel 'Morski Widok',Adam G.,5,"Fantastyczna lokalizacja. Wszędzie blisko.",2025-06-18T17:00:00Z,,
+rev_B193,place_B_Hotel,Hotel 'Morski Widok',Natalia R.,4,"",2025-06-17T19:00:00Z,,
+rev_B194,place_B_Hotel,Hotel 'Morski Widok',Grzegorz H.,5,"Super hotel. Czysto, cicho. Idealny na wypoczynek.",2025-06-17T14:00:00Z,"Dziękujemy!",2025-06-17T15:00:00Z
+rev_B195,place_B_Hotel,Hotel 'Morski Widok',Monika C.,2,"Śniadanie niesmaczne, mały wybór. Nie polecam.",2025-06-16T11:00:00Z,,
+rev_B196,place_B_Hotel,Hotel 'Morski Widok',Łukasz F.,5,"Wszystko w najlepszym porządku. Polecam.",2025-06-15T16:00:00Z,,
+rev_B197,place_B_Hotel,Hotel 'Morski Widok',Patrycja K.,4,"Pokoje czyste, obsługa miła. Trochę głośno od ulicy.",2025-06-14T19:00:00Z,,
+rev_B198,place_B_Hotel,Hotel 'Morski Widok',Marcin K.,1,"Tragiczna obsługa. Recepcjonista był opryskliwy.",2025-06-14T12:00:00Z,"Przepraszamy za zachowanie pracownika.",2025-06-14T13:00:00Z
+rev_B199,place_B_Hotel,Hotel 'Morski Widok',Anna Z.,5,"Polecam. Piękny hotel, świetna lokalizacja.",2025-06-13T17:00:00Z,,
+rev_B200,place_B_Hotel,Hotel 'Morski Widok',Piotr W.,3,"",2025-06-12T15:00:00Z,,

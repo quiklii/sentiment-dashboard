@@ -1,0 +1,24 @@
+[project]
+name = "sentiment-dashboard"
+version = "0.1.0"
+description = "Streamlit sentiment analysis dashboard"
+authors = [
+    { name = "quiklii" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit",
+    "pandas",
+    "numpy",
+    "altair",
+    "transformers",
+    "torch"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src"]
