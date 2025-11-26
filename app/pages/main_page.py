@@ -25,9 +25,16 @@ def calculate_delta(df: pd.DataFrame, column: str) -> float | None:
     delta = df[column].iloc[-1] - df[column].iloc[-2]
     return delta
 
+# Main chart
+def create_main_chart(df: pd.DataFrame, timeframe: str, height: int = 400):
+    df_melt = df.melt(
+        id_vars=['publish_time'],
+        value_vars=['Positive', 'Neutral', 'Negative'],
+        var_name='sentiment',
+        value_name='count'
+    )
+
 # KPI cards
-
-
 def kpi_cards(df: pd.DataFrame):
     col1, col2, col3, col4 = st.columns(4)
 

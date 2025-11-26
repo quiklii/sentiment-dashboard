@@ -11,7 +11,8 @@ def analyze_sentiments(df: pd.DataFrame) -> pd.DataFrame:
     """Perform sentiment analysis on the 'review_text' column of the DataFrame."""
     df = df.copy()
 
-    logger.info('Starting sentiment analysis process')
+    logger.info(
+        f'Starting sentiment analysis process and analyzing {len(df)} records')
     if df.empty:
         logger.warning('Input DataFrame is empty')
         return df
@@ -22,7 +23,9 @@ def analyze_sentiments(df: pd.DataFrame) -> pd.DataFrame:
 
     df['sentiment_label'] = [res['label'] for res in results]
     df['sentiment_score'] = [res['score'] for res in results]
-    df['weighted_sentiment'] = df['sentiment_score'] * df['rating']
+    df['weighted_sentiment'] = df['sentiment_score'] * \
+        df['sentiment_label'].map(
+            {'Positive': 1, 'Neutral': 0, 'Negative': -1})
 
     logger.info('Sentiment analysis process completed')
 
