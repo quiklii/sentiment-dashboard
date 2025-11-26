@@ -26,7 +26,12 @@ def analyze_sentiments(df: pd.DataFrame) -> pd.DataFrame:
     df['weighted_sentiment'] = df['sentiment_score'] * \
         df['sentiment_label'].map(
             {'Positive': 1, 'Neutral': 0, 'Negative': -1})
+    one_hot = (
+    pd.get_dummies(df['sentiment_label'], dtype=int)
+    .reindex(columns=['Positive', 'Neutral', 'Negative'], fill_value=0)
+    )
+    df = pd.concat([df, one_hot], axis=1)
 
     logger.info('Sentiment analysis process completed')
 
-    return df[['review_id', 'sentiment_label', 'sentiment_score', 'weighted_sentiment']]
+    return df[['review_id', 'sentiment_label', 'sentiment_score', 'weighted_sentiment', 'Positive', 'Neutral', 'Negative']]

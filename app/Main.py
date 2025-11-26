@@ -71,6 +71,12 @@ with st.sidebar:
         min_value=min_date,
         max_value=max_date,
     )
+    
+    # Wait for both dates to be selected
+    if len(date_range) != 2:
+        st.warning("Please select both start and end dates.")
+        st.stop()
+    
     start_date, end_date = date_range
     df_filtered = df_filter_loc[
         (df_filter_loc["publish_time"].dt.date >= start_date)
@@ -97,10 +103,10 @@ with st.sidebar:
     df_display = aggregate_by_timeframe(df_filtered, timescale_map[timescale])
 
 # --- SESSION STATE SETUP ---
-if 'df_filtered' not in st.session_state:
-    st.session_state['df_filtered'] = df_filtered
-if 'df_display' not in st.session_state:
-    st.session_state['df_display'] = df_display
+# Always update session state with latest filtered data
+st.session_state['df_filtered'] = df_filtered
+st.session_state['df_display'] = df_display
+st.session_state['timescale'] = timescale
 
 # --- RUN NAVIATION ---
 pg.run()
