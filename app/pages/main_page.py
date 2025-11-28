@@ -35,43 +35,63 @@ def calculate_delta(df: pd.DataFrame, column: str) -> float | None:
     return delta
 
 # Chart 1 - per period
-def create_main_chart(df: pd.DataFrame, time_unit: str, height: int = 400):
-    df_melt = df.melt(
-        id_vars=['publish_time'],
-        value_vars=['Positive', 'Neutral', 'Negative'],
-        var_name='sentiment',
-        value_name='count'
-    )
+def create_main_chart(df: pd.DataFrame, time_unit: str, color: str, height: int = 400):
     
-    chart = alt.Chart(df_melt).mark_bar().encode(
-        x=alt.X(
-            f'{time_unit}(publish_time):O',
-            title='Date',
-            axis=alt.Axis(labelAngle=-45)
-        ),
-        y=alt.Y(
-            'sum(count):Q',
-            title='Count'
-        ),
-        color=alt.Color(
-            'sentiment:N',
-            scale=alt.Scale(
-                domain=['Positive', 'Neutral', 'Negative'],
-                range=['#22c55e', '#94a3b8', '#ef4444']
+    if color:
+        df_melt = df.melt(
+            id_vars=['publish_time'],
+            value_vars=['Positive', 'Neutral', 'Negative'],
+            var_name='sentiment',
+            value_name='count'
+        )
+    
+        chart = alt.Chart(df_melt).mark_bar().encode(
+            x=alt.X(
+                f'{time_unit}(publish_time):O',
+                title='Date',
+                axis=alt.Axis(labelAngle=-45)
             ),
-            legend=alt.Legend(title='Sentiment')
-        ),
-        order=alt.Order('sentiment:N', sort='descending'),
-        tooltip=[
-            alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
-            alt.Tooltip('sentiment:N', title='Sentiment'),
-            alt.Tooltip('sum(count):Q', title='Count', format=',')
-        ]
-    ).properties(
-        height=height
-    )
-    
-    return chart
+            y=alt.Y(
+                'sum(count):Q',
+                title='Count'
+            ),
+            color=alt.Color(
+                'sentiment:N',
+                scale=alt.Scale(
+                    domain=['Positive', 'Neutral', 'Negative'],
+                    range=['#22c55e', '#94a3b8', '#ef4444']
+                ),
+                legend=alt.Legend(title='Sentiment')
+                ),
+                order=alt.Order('sentiment:N', sort='descending'),
+                tooltip=[
+                    alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
+                    alt.Tooltip('sentiment:N', title='Sentiment'),
+                    alt.Tooltip('sum(count):Q', title='Count', format=',')
+                ]
+        )
+    else:
+        df_chart = df[['publish_time', 'Positive', 'Neutral', 'Negative']].copy()
+        df_chart['Total']= df_chart[['Positive', 'Neutral', 'Negative']].sum(axis=1)
+        df_chart = df_chart[['publish_time', 'Total']]
+        
+        chart = alt.Chart(df_chart).mark_bar(color='lightgray').encode(
+            x=alt.X(
+                f'{time_unit}(publish_time):O',
+                title='Date',
+                axis=alt.Axis(labelAngle=-45)
+            ),
+            y=alt.Y(
+                'sum(Total):Q',
+                title='Count'
+            ),
+            tooltip=[
+                alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
+                alt.Tooltip('sum(Total):Q', title='Count', format=',')
+            ]
+        )
+        
+    return chart.properties(height=height)
 
 # Chart 2 - trend over time (multiple options)
 def create_trend_chart(df: pd.DataFrame, time_unit: str, chart_type: str, height: int = 400):
@@ -109,7 +129,7 @@ def create_trend_chart(df: pd.DataFrame, time_unit: str, chart_type: str, height
                 ),
                 legend=alt.Legend(title='Sentiment')
             ),
-            #order=alt.Order('sentiment:N', sort='descending'),
+            order=alt.Order('sentiment:N', sort='descending'),
             tooltip=[
                 alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
                 alt.Tooltip('sentiment:N', title='Sentiment'),
@@ -196,40 +216,49 @@ try:
         # kpi
         kpi_cards(df_display)
         
-        # chart 1 + chart 2
+        # Kontrolki w jednym wierszu
+        col_controls1, col_controls2 = st.columns(2)
+        
+        with col_controls1:
+            color = st.toggle(
+                'Color',
+                value=True,
+                key='main_chart_color',
+                help='Toggle to enable/disable color coding by sentiment.'
+            )
+        
+        with col_controls2:
+            chart2_type = st.selectbox(
+                'Select Trend Chart Type',
+                options=['Sentiment Ratio', 'Sentiment Index', 'Average Rating'],
+                key='trend_chart_type',
+                label_visibility='collapsed',
+                width=250
+            )
+        
+        chart_type_map = {
+            'Sentiment Ratio': 'sentiment_proportion',
+            'Sentiment Index': 'sentiment_index',
+            'Average Rating': 'avg_rating'
+        }
+        
+        # Wykresy w osobnych kolumnach (bez hconcat)
         col_chart1, col_chart2 = st.columns(2)
-        with st.container():
-            with col_chart1:
-                chart1_type = st.selectbox(
-                    'Select Main Chart Type',
-                    options=['Sentiment Counts'],
-                    key='main_chart_type',
-                    width=200,
-                    label_visibility='hidden'
-                )
-                chart1 = create_main_chart(
-                    df_display, timeunit_map[st.session_state['timescale']], height=400)
-                st.altair_chart(chart1, width='stretch')
-            with col_chart2:
-                chart2_type = st.selectbox(
-                    'Select Trend Chart Type',
-                    options=['Sentiment Ratio', 'Sentiment Index', 'Average Rating'],
-                    key='trend_chart_type',
-                    width=200,
-                    label_visibility='hidden'
-                )
-                chart_type_map = {
-                    'Sentiment Ratio': 'sentiment_proportion',
-                    'Sentiment Index': 'sentiment_index',
-                    'Average Rating': 'avg_rating'
-                }
-                chart2 = create_trend_chart(
-                    df_display,
-                    timeunit_map[st.session_state['timescale']],
-                    chart_type=chart_type_map[chart2_type],
-                    height=400
-                )
-                st.altair_chart(chart2, width='stretch')
+        
+        with col_chart1:
+            chart1 = create_main_chart(
+                df_display, timeunit_map[st.session_state['timescale']], color, height=400
+            )
+            st.altair_chart(chart1, width='stretch')
+        
+        with col_chart2:
+            chart2 = create_trend_chart(
+                df_display,
+                timeunit_map[st.session_state['timescale']],
+                chart_type=chart_type_map[chart2_type],
+                height=400
+            )
+            st.altair_chart(chart2, width='stretch')
                 
 except Exception as e:
     logger.error(f"Error loading data", exc_info=True)
