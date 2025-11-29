@@ -138,6 +138,7 @@ def create_trend_chart(df: pd.DataFrame, time_unit: str, chart_type: str, height
         )
     else:
         c = config[chart_type]
+        df = df[['publish_time', chart_type]].copy()
         
         chart = alt.Chart(df).mark_area(
             line={'color' : c['color']},
@@ -157,11 +158,91 @@ def create_trend_chart(df: pd.DataFrame, time_unit: str, chart_type: str, height
         )
     
     return chart.properties(height=height)
-            
 
+# Rating distribution chart
+def rating_distribution_chart(df: pd.DataFrame, height: int = 65):
+
+    dist = (
+        df['rating']
+        .value_counts()
+        .reindex([5, 4, 3, 2, 1], fill_value=0)
+        .reset_index()
+    )
+    dist.columns = ['rating', 'count']
+
+    chart = (
+        alt.Chart(dist)
+        .mark_bar(size=15, cornerRadius=5, color='#d4af37')
+        .encode(
+            x=alt.X(
+                'rating:O',
+                sort=[5, 4, 3, 2, 1],
+                axis=alt.Axis(labelAngle=0, title=None, labelPadding=4)
+            ),
+            y=alt.Y(
+                'count:Q',
+                title=None,
+                axis=alt.Axis(labels=False, ticks=False, domain=False)  # deletes y-axis
+            ),
+            tooltip=['rating','count']
+        )
+        .properties(
+            height=height,
+            padding={'left': 0, 'right': 0, 'top': 0, 'bottom': -1}
+        )
+    )
+
+    st.altair_chart(chart, width='stretch')
+            
+# Custom sentiment progress bar (still dont know if its good)
+def sentiment_progress_bar(value: float, height: int = 10):
+    """
+    Custom progress bar with dynamic color (red → yellow → green).
+    Always fills container width.
+    Args:
+        value: float 0–100
+        height: thickness of the bar in px
+    """
+    value = max(0, min(100, float(value)))
+
+    # compute gradient color dynamically
+    # 0→50 red→yellow , 50→100 yellow→green
+    if value <= 50:
+        # red → yellow
+        r = 255
+        g = int(255 * (value / 50))
+        b = 0
+    else:
+        # yellow → green
+        r = int(255 * (1 - (value - 50) / 50))
+        g = 255
+        b = 0
+
+    color = f"rgb({r},{g},{b})"
+
+    bar_html = f"""
+    <div style="
+        width: 100%;
+        background-color: rgba(200,200,200,0.15);
+        border-radius: {height}px;
+        height: {height}px;
+        position: relative;
+        overflow: hidden;
+    ">
+        <div style="
+            width: {value}%;
+            background-color: {color};
+            height: 100%;
+            border-radius: {height}px;
+            transition: width 0.4s ease, background-color 0.4s ease;
+        "></div>
+    </div>
+    """
+
+    st.markdown(bar_html, unsafe_allow_html=True)
 
 # KPI cards
-def kpi_cards(df: pd.DataFrame):
+def kpi_cards(df: pd.DataFrame, df_filtered: pd.DataFrame):
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
@@ -178,6 +259,7 @@ def kpi_cards(df: pd.DataFrame):
                 f'{df["avg_rating"].iloc[-1]:.2f} / 5.0',
                 delta=display_delta(delta),
             )
+            rating_distribution_chart(df_filtered)
 
     with col3:
         with st.container(border=True, height="stretch"):
@@ -187,6 +269,7 @@ def kpi_cards(df: pd.DataFrame):
                 f'{df["sentiment_index"].iloc[-1]:.2f} / 100',
                 delta=display_delta(delta),
             )
+            sentiment_progress_bar(df["sentiment_index"].iloc[-1])
 
     with col4:
         with st.container(border=True, height="stretch"):
@@ -214,9 +297,9 @@ try:
         st.warning('No data available to display.')
     else:
         # kpi
-        kpi_cards(df_display)
+        kpi_cards(df_display, df_filtered)
         
-        # Kontrolki w jednym wierszu
+        # Controls in one row
         col_controls1, col_controls2 = st.columns(2)
         
         with col_controls1:
@@ -242,12 +325,12 @@ try:
             'Average Rating': 'avg_rating'
         }
         
-        # Wykresy w osobnych kolumnach (bez hconcat)
+        # charts in different row
         col_chart1, col_chart2 = st.columns(2)
         
         with col_chart1:
             chart1 = create_main_chart(
-                df_display, timeunit_map[st.session_state['timescale']], color, height=400
+                df_display, timeunit_map[st.session_state['timescale']], color, height=450
             )
             st.altair_chart(chart1, width='stretch')
         
@@ -256,7 +339,7 @@ try:
                 df_display,
                 timeunit_map[st.session_state['timescale']],
                 chart_type=chart_type_map[chart2_type],
-                height=400
+                height=450
             )
             st.altair_chart(chart2, width='stretch')
                 
