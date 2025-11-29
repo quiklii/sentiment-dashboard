@@ -36,27 +36,6 @@ def aggregate_by_timeframe(df: pd.DataFrame, freq: str) -> pd.DataFrame:
     # --- RESAMPLE AND AGGREGATE ---
     df_resampled = df.resample(freq).agg(agg_dict)
 
-    # # --- ADD LABELS ---
-    # idx = df_resampled.index
-
-    # if freq == 'D':
-    #     labels = idx.strftime('%Y-%m-%d')
-
-    # elif freq == 'W-MON':
-    #     iso = idx.isocalendar()
-    #     labels = 'W' + iso.week.astype(str) + ' ' + iso.year.astype(str)
-
-    # elif freq == 'M':
-    #     labels = 'M' + idx.month.astype(str) + ' ' + idx.year.astype(str)
-
-    # elif freq == 'Q':
-    #     labels = 'Q' + idx.quarter.astype(str) + ' ' + idx.year.astype(str)
-
-    # elif freq == 'Y':
-    #     labels = idx.year.astype(str)
-
-    # df_resampled['time_label'] = labels
-
     df_resampled[['cum_positive', 'cum_neutral', 'cum_negative', 'cum_reviews', 'cum_analyzed', 'cum_weighted_sentiment', 'cum_sentiment_score', 'cum_rating']] = \
         df_resampled[['Positive', 'Neutral', 'Negative', 'n_reviews', 'n_analyzed',
                       'weighted_sentiment', 'sentiment_score', 'rating']].cumsum()
