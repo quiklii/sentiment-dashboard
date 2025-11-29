@@ -3,8 +3,7 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 
-from src.common.cache import get_data
-from src.analytics.aggregations import aggregate_by_timeframe
+from src.common.cache import get_aggregated_data, get_data
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -100,7 +99,7 @@ with st.sidebar:
         'Quarterly': 'Q',
         'Yearly': 'Y'
     }
-    df_display = aggregate_by_timeframe(df_filtered, timescale_map[timescale])
+    df_display = get_aggregated_data(df_filtered, timescale_map[timescale])
 
 # --- SESSION STATE SETUP ---
 # Always update session state with latest filtered data

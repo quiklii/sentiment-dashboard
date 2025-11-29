@@ -6,6 +6,7 @@ from pathlib import Path
 
 from src.data_loader import load_enriched_data
 from src.utils.logger import get_logger
+from src.analytics.aggregations import aggregate_by_timeframe
 
 logger = get_logger(__name__)
 
@@ -19,3 +20,10 @@ def get_data(file_path: Path = DATA_FILE_PATH) -> pd.DataFrame:
     df = load_enriched_data(file_path)
     logger.info(f"Data loaded to cache with {len(df)} records.")
     return df
+
+@st.cache_data(show_spinner="Aggregating data...")
+def get_aggregated_data(df: pd.DataFrame, freq: str) -> pd.DataFrame:
+    """Aggregate data by the specified timeframe frequency."""
+    aggregated_df = aggregate_by_timeframe(df, freq)
+    logger.info(f"Aggregated data cached with frequency '{freq}' and {len(aggregated_df)} records.")
+    return aggregated_df
