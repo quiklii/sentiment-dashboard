@@ -11,4 +11,5 @@ Sentience brings clarity to customer feedback, transforming raw data into practi
 
 ## Application Preview
 
-![Main Page](assets/main_page.png)
+![Main Page](main_page.PNG)
+
