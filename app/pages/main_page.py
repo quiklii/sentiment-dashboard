@@ -342,6 +342,7 @@ try:
                 height=450
             )
             st.altair_chart(chart2, width='stretch')
+        #st.write(df_filtered.columns.tolist())
                 
 except Exception as e:
     logger.error(f"Error loading data", exc_info=True)

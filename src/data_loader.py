@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.preprocess import format_data, clean_data
+from src.preprocess import format_data, clean_data, tokenize_texts
 from src.sentiment_analysis import analyze_sentiments
 from src.utils.logger import get_logger
 
@@ -29,5 +29,7 @@ def load_enriched_data(file_path: str) -> pd.DataFrame:
         return df
     df = format_data(df)
     df_analyzed = analyze_sentiments(clean_data(df))
+    df_nlp = tokenize_texts(clean_data(df))
+    df = pd.merge(df, df_nlp, on='review_id', how='left')
 
     return pd.merge(df, df_analyzed, on='review_id', how='left')
