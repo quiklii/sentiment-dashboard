@@ -18,7 +18,7 @@ def prepare_ngram_wordcloud_dict(ngrams_dict: dict) -> dict:
         freqs[label] = count
     return freqs
 
-def generate_wordcloud(ngrams_dict: dict, colormap: str = 'viridis', width: int = 800, height: int = 400):
+def generate_wordcloud(ngrams_dict: dict, colormap: str = 'viridis', max_words: int = 20, width: int = 800, height: int = 400):
     """Generate a word cloud from frequency dictionary."""
     
     wordcloud = WordCloud(

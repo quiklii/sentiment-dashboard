@@ -16,3 +16,5 @@ def load_spacy_model():
     except Exception as e:
         logger.error(f"Error loading spaCy model: {e}")
         raise e # may be unnecessary
+    
+    # CHANGE OF MODEL IS NEEDED IN FUTURE (faulty lemmatization of some words, maybe Stanza?)

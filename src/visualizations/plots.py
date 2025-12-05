@@ -3,6 +3,7 @@
 import altair as alt
 import pandas as pd
 
+# --- MAIN PAGE CHARTS ---
 # Chart 1 - per period
 def create_main_chart(df: pd.DataFrame, time_unit: str, color: str, height: int = 400):
     
@@ -160,5 +161,36 @@ def rating_distribution_chart(df: pd.DataFrame, height: int = 65):
             padding={'left': 0, 'right': 0, 'top': 0, 'bottom': -1}
         )
     )
+
+    return chart
+
+# --- CONTENT ANALYSIS CHARTS ---
+# N-gram bar chart
+def ngram_bar_chart(ngram_dist: dict, color: str, top_n: int = 20, height: int = 500):
+    """Create a bar chart for n-gram distribution."""
+    df_ngrams = pd.DataFrame({
+        'ngram': ngram_dist['ngram'],
+        'count': ngram_dist['count']
+    })
+    df_ngrams['ngram'] = df_ngrams['ngram'].apply(
+        lambda x: ' '.join(x) if isinstance(x, tuple) else x
+    )
+    df_ngrams = df_ngrams.head(top_n)
+    
+    chart = alt.Chart(df_ngrams).mark_bar(color=color).encode(
+        x=alt.X('count:Q', title='Count'),
+        y=alt.Y('ngram:N', 
+                sort='-x', 
+                title=None,
+                axis=alt.Axis(
+                    labelLimit=1000,
+                    labelOverlap=False
+                )
+        ),
+        tooltip=[
+            alt.Tooltip('ngram:N', title='N-gram'),
+            alt.Tooltip('count:Q', title='Count')
+        ]
+    ).properties(height=height)
 
     return chart

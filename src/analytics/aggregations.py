@@ -75,8 +75,8 @@ def ngram_distribution(df: pd.DataFrame) -> dict:
         ngram_series = df['clean_tokens'].apply(lambda x: extract_ngrams(x, n))
         all_ngrams = [ngram for row in ngram_series for ngram in row]
         counts = Counter(all_ngrams)
-        
-        ngrams_counts = {'ngram': list(counts.keys()), 'count': list(counts.values())}
+        counts = counts.most_common()
+        ngrams_counts = {'ngram': [ng for ng, c in counts], 'count': [c for ng, c in counts]}
         
         # df_counts = (
         #     pd.DataFrame(counts.items(), columns=['ngram', 'count'])
