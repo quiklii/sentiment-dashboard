@@ -4,7 +4,8 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-from src.common.cache import get_data
+from src.visualizations.plots import create_main_chart, create_trend_chart, rating_distribution_chart
+from src.analytics.aggregations import display_delta, calculate_delta
 
 from src.utils.logger import get_logger
 logger = get_logger(__name__)
@@ -17,183 +18,7 @@ timeunit_map = {
     'Quarterly': 'yearquarter',
     'Yearly': 'year'
 }
-
-def display_delta(delta, decimals=2, scale=1.0, suffix=''):
-    if delta is None:
-        return None
-    value = delta * scale
-    if round(value, decimals) == 0:
-        return None
-    return f"{value:.{decimals}f}{suffix}" if suffix else round(value, decimals)
-
-
-def calculate_delta(df: pd.DataFrame, column: str) -> float | None:
-    df = df.dropna(subset=[column]).copy()
-    if len(df) < 2:
-        return 0
-    delta = df[column].iloc[-1] - df[column].iloc[-2]
-    return delta
-
-# Chart 1 - per period
-def create_main_chart(df: pd.DataFrame, time_unit: str, color: str, height: int = 400):
-    
-    if color:
-        df_melt = df.melt(
-            id_vars=['publish_time'],
-            value_vars=['Positive', 'Neutral', 'Negative'],
-            var_name='sentiment',
-            value_name='count'
-        )
-    
-        chart = alt.Chart(df_melt).mark_bar().encode(
-            x=alt.X(
-                f'{time_unit}(publish_time):O',
-                title='Date',
-                axis=alt.Axis(labelAngle=-45)
-            ),
-            y=alt.Y(
-                'sum(count):Q',
-                title='Count'
-            ),
-            color=alt.Color(
-                'sentiment:N',
-                scale=alt.Scale(
-                    domain=['Positive', 'Neutral', 'Negative'],
-                    range=['#22c55e', '#94a3b8', '#ef4444']
-                ),
-                legend=alt.Legend(title='Sentiment')
-                ),
-                order=alt.Order('sentiment:N', sort='descending'),
-                tooltip=[
-                    alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
-                    alt.Tooltip('sentiment:N', title='Sentiment'),
-                    alt.Tooltip('sum(count):Q', title='Count', format=',')
-                ]
-        )
-    else:
-        df_chart = df[['publish_time', 'Positive', 'Neutral', 'Negative']].copy()
-        df_chart['Total']= df_chart[['Positive', 'Neutral', 'Negative']].sum(axis=1)
-        df_chart = df_chart[['publish_time', 'Total']]
-        
-        chart = alt.Chart(df_chart).mark_bar(color='lightgray').encode(
-            x=alt.X(
-                f'{time_unit}(publish_time):O',
-                title='Date',
-                axis=alt.Axis(labelAngle=-45)
-            ),
-            y=alt.Y(
-                'sum(Total):Q',
-                title='Count'
-            ),
-            tooltip=[
-                alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
-                alt.Tooltip('sum(Total):Q', title='Count', format=',')
-            ]
-        )
-        
-    return chart.properties(height=height)
-
-# Chart 2 - trend over time (multiple options)
-def create_trend_chart(df: pd.DataFrame, time_unit: str, chart_type: str, height: int = 400):
-    """
-    Create trend chart with multiple visualization options.
-    
-    chart_type options:
-    - 'sentiment_index': Line chart of Sentiment Index
-    - 'avg_rating': Line chart of Average Rating  
-    - 'sentiment_proportion': Normalized stacked area chart of sentiment proportions
-    """
-    
-    # Config
-    config = {
-        'sentiment_index': {'title': 'Sentiment Index', 'color': 'lightgreen'},
-        'avg_rating': {'title': 'Average Rating', 'color': 'gold'}
-    }
-    
-    x_enc = alt.X(f'{time_unit}(publish_time):O', title='Date', axis=alt.Axis(labelAngle=-45))
-    
-    if chart_type == 'sentiment_proportion':
-        df = df.melt(
-            id_vars=['publish_time'],
-            value_vars=['positive_ratio', 'neutral_ratio', 'negative_ratio'],
-            var_name='sentiment',
-            value_name='proportion'
-        )
-        chart = alt.Chart(df).mark_area().encode(
-            x=x_enc,
-            y=alt.Y('proportion:Q', stack='normalize', title='Proportion', axis=alt.Axis(format='%')),
-            color=alt.Color('sentiment:N',
-                scale=alt.Scale(
-                    domain=['positive_ratio', 'neutral_ratio', 'negative_ratio'],
-                    range = ['#22c55e', '#94a3b8', '#ef4444']
-                ),
-                legend=alt.Legend(title='Sentiment')
-            ),
-            order=alt.Order('sentiment:N', sort='descending'),
-            tooltip=[
-                alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
-                alt.Tooltip('sentiment:N', title='Sentiment'),
-                alt.Tooltip('proportion:Q', title='Proportion', format='.1%')
-            ]
-        )
-    else:
-        c = config[chart_type]
-        df = df[['publish_time', chart_type]].copy()
-        
-        chart = alt.Chart(df).mark_area(
-            line={'color' : c['color']},
-            color=alt.Gradient(
-                gradient='linear',
-                stops=[alt.GradientStop(color='white', offset=0),
-                       alt.GradientStop(color=c['color'], offset=1)],
-                x1=1, y1=1, x2=1, y2=0
-            )
-        ).encode(
-            x=x_enc,
-            y=alt.Y(f'{chart_type}:Q', title=c['title']),
-            tooltip=[
-                alt.Tooltip(f'{time_unit}(publish_time):O', title='Period'),
-                alt.Tooltip(f'{chart_type}:N', title=c['title'], format='.2f')
-            ]
-        )
-    
-    return chart.properties(height=height)
-
-# Rating distribution chart
-def rating_distribution_chart(df: pd.DataFrame, height: int = 65):
-
-    dist = (
-        df['rating']
-        .value_counts()
-        .reindex([5, 4, 3, 2, 1], fill_value=0)
-        .reset_index()
-    )
-    dist.columns = ['rating', 'count']
-
-    chart = (
-        alt.Chart(dist)
-        .mark_bar(size=15, cornerRadius=5, color='#d4af37')
-        .encode(
-            x=alt.X(
-                'rating:O',
-                sort=[5, 4, 3, 2, 1],
-                axis=alt.Axis(labelAngle=0, title=None, labelPadding=4)
-            ),
-            y=alt.Y(
-                'count:Q',
-                title=None,
-                axis=alt.Axis(labels=False, ticks=False, domain=False)  # deletes y-axis
-            ),
-            tooltip=['rating','count']
-        )
-        .properties(
-            height=height,
-            padding={'left': 0, 'right': 0, 'top': 0, 'bottom': -1}
-        )
-    )
-
-    st.altair_chart(chart, width='stretch')
-            
+           
 # Custom sentiment progress bar (still dont know if its good)
 def sentiment_progress_bar(value: float, height: int = 10):
     """
@@ -259,7 +84,7 @@ def kpi_cards(df: pd.DataFrame, df_filtered: pd.DataFrame):
                 f'{df["avg_rating"].iloc[-1]:.2f} / 5.0',
                 delta=display_delta(delta),
             )
-            rating_distribution_chart(df_filtered)
+            st.altair_chart(rating_distribution_chart(df_filtered), width='stretch')
 
     with col3:
         with st.container(border=True, height="stretch"):
@@ -342,7 +167,7 @@ try:
                 height=450
             )
             st.altair_chart(chart2, width='stretch')
-        #st.write(df_filtered.columns.tolist())
+        st.dataframe(df_filtered.head(10))
                 
 except Exception as e:
     logger.error(f"Error loading data", exc_info=True)

@@ -1,0 +1,7 @@
+[theme]
+base="dark"
+primaryColor="#4C8BF5"          # Niebieski akcent (ładnie wygląda na dark theme)
+backgroundColor="#0E1117"       # Główne tło (GitHub-like dark)
+secondaryBackgroundColor="#161B22" # Tło boxów / komponentów
+textColor="#FFFFFF"             # Biały tekst
+font="sans serif"               # Domyślna nowoczesna czcionka

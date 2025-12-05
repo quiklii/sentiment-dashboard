@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 
-from src.common.cache import get_aggregated_data, get_data
+from src.common.cache import get_aggregated_data, get_data, get_ngram_distributions
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -106,6 +106,10 @@ with st.sidebar:
 st.session_state['df_filtered'] = df_filtered
 st.session_state['df_display'] = df_display
 st.session_state['timescale'] = timescale
+st.session_state['positive_ngrams_dists'] = get_ngram_distributions(
+    df_filtered[df_filtered['sentiment_label'] == 'Positive'])
+st.session_state['negative_ngrams_dists'] = get_ngram_distributions(
+    df_filtered[df_filtered['sentiment_label'] == 'Negative'])
 
 # --- RUN NAVIATION ---
 pg.run()

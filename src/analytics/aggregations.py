@@ -2,12 +2,17 @@
 
 import pandas as pd
 
+from collections import Counter
+
+from src.nlp.preprocess import extract_ngrams
+
 from src.utils.logger import get_logger
 logger = get_logger(__name__)
 
 
 def aggregate_by_timeframe(df: pd.DataFrame, freq: str) -> pd.DataFrame:
     """Aggregate data by the specified timeframe frequency."""
+    
     logger.info(f"Aggregating data with frequency: {freq}")
     df = df.copy()
 
@@ -60,3 +65,41 @@ def aggregate_by_timeframe(df: pd.DataFrame, freq: str) -> pd.DataFrame:
         df_resampled['publish_time'] = df_resampled['publish_time'] - pd.Timedelta(days=1)
 
     return df_resampled
+
+def ngram_distribution(df: pd.DataFrame) -> dict:
+    """Calculate n-gram distribution from the tokenized texts."""
+    logger.info("Calculating n-gram distribution...")
+    results = {}
+    df = df[df['clean_tokens'].notnull()].copy()
+    for n in range(1, 4):
+        ngram_series = df['clean_tokens'].apply(lambda x: extract_ngrams(x, n))
+        all_ngrams = [ngram for row in ngram_series for ngram in row]
+        counts = Counter(all_ngrams)
+        
+        ngrams_counts = {'ngram': list(counts.keys()), 'count': list(counts.values())}
+        
+        # df_counts = (
+        #     pd.DataFrame(counts.items(), columns=['ngram', 'count'])
+        #     .sort_values('count', ascending=False)
+        #     .reset_index(drop=True)
+        # )
+        results[f'{n}_gram'] = ngrams_counts
+        logger.info(f"Calculated {len(ngrams_counts['ngram'])} unique {n}-grams.")
+    return results
+
+def display_delta(delta, decimals=2, scale=1.0, suffix=''):
+    if delta is None:
+        return None
+    value = delta * scale
+    if round(value, decimals) == 0:
+        return None
+    return f"{value:.{decimals}f}{suffix}" if suffix else round(value, decimals)
+
+
+def calculate_delta(df: pd.DataFrame, column: str) -> float | None:
+    df = df.dropna(subset=[column]).copy()
+    if len(df) < 2:
+        return 0
+    delta = df[column].iloc[-1] - df[column].iloc[-2]
+    return delta
+        
