@@ -194,3 +194,46 @@ def ngram_bar_chart(ngram_dist: dict, color: str, top_n: int = 20, height: int =
     ).properties(height=height)
 
     return chart
+
+def render_pie_chart(df: pd.DataFrame, column: str, colors: list[str] = None, height: int = 400):
+    """Render a pie chart for the given column in the DataFrame."""
+    
+    dist = (
+        df[column]
+        .value_counts()
+        .reset_index()
+    )
+    total = dist['count'].sum()
+    dist['ratio'] = dist['count'] / total
+    # base encoding
+    color_encoding = alt.Color(f'{column}:N', legend=alt.Legend(title=column.title()))
+    
+    if colors:
+        if isinstance(colors, dict):
+            unique_values = dist[column].tolist()
+            domain = [val for val in unique_values if val in colors]
+            range_colors = [colors[val] for val in domain]
+            
+            color_encoding = alt.Color(
+                f'{column}:N',
+                scale=alt.Scale(domain=domain, range=range_colors),
+                legend=alt.Legend(title=column.title())
+            )
+        else:
+            color_encoding = alt.Color(
+                f'{column}:N',
+                scale=alt.Scale(range=colors),
+                legend=alt.Legend(title=column.title())
+            )
+    chart = alt.Chart(dist).mark_arc().encode(
+        theta=alt.Theta(field='count', type='quantitative'),
+        color=color_encoding,
+        tooltip=[
+            alt.Tooltip(f'{column}:N', title=column.title()),
+            alt.Tooltip('count:Q', title='Count'),
+            alt.Tooltip('ratio:Q', title='Ratio', format='.1%')
+        ]
+    ).properties(height=height)
+    
+    return chart
+    

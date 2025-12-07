@@ -5,7 +5,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 from src.visualizations.wordcloud import generate_wordcloud, render_wordcloud_figure
-from src.visualizations.plots import ngram_bar_chart
+from src.visualizations.plots import ngram_bar_chart, render_pie_chart
 
 from src.utils.logger import get_logger
 logger = get_logger(__name__)
@@ -65,7 +65,7 @@ logger = get_logger(__name__)
 
 @st.fragment
 def render_ngram_section(title: str, data_key: str, options: dict, color: str, colormap: str, key_prefix: str):
-    st.subheader(title)
+    st.markdown(f"##### {title}")
     inner_cols = st.columns(4)
     
     with inner_cols[0]:
@@ -103,6 +103,7 @@ def render_ngram_section(title: str, data_key: str, options: dict, color: str, c
 st.title('Content Analysis')
 
 # --- CONTENT ANALYSIS PAGE ---
+# CONTAINER FOR N-GRAM SECTIONS
 with st.container():
     options = {'Unigram': '1', 'Bigram': '2', 'Trigram': '3'}
     col1, col2 = st.columns(2)
@@ -126,6 +127,18 @@ with st.container():
             colormap='autumn',
             key_prefix='neg'
         )
-
+# CONTAINER FOR DISTRIBUTION CHARTS
+with st.container():
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("##### Rating Distribution")
+        color_map = {'Positive': '#22c55e', 'Neutral': '#94a3b8', 'Negative': '#ef4444'}
+        chart = render_pie_chart(
+            st.session_state['df_filtered'],
+            column='sentiment_label',
+            colors=color_map
+            )
+        st.altair_chart(chart, width='stretch')
 
 
