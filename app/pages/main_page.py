@@ -167,7 +167,7 @@ try:
                 height=450
             )
             st.altair_chart(chart2, width='stretch')
-        #st.dataframe(df_filtered.head(10))
+        st.dataframe(df_filtered.head(10))
                 
 except Exception as e:
     logger.error(f"Error loading data", exc_info=True)

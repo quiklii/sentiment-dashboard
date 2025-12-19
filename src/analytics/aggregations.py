@@ -4,7 +4,7 @@ import pandas as pd
 
 from collections import Counter
 
-from src.nlp.preprocess import extract_ngrams
+from src.nlp.preprocess import preprocess_text, extract_ngrams
 
 from src.utils.logger import get_logger
 logger = get_logger(__name__)
@@ -86,6 +86,38 @@ def ngram_distribution(df: pd.DataFrame) -> dict:
         results[f'{n}_gram'] = ngrams_counts
         logger.info(f"Calculated {len(ngrams_counts['ngram'])} unique {n}-grams.")
     return results
+
+def evidence_search(df: pd.DataFrame, text, sort_by, filter) -> pd.DataFrame:
+    '''Search evidence quotes based on the text, sort and filter criteria.'''
+    logger.info("Performing evidence search...")
+    df = df[df['review_text'].notnull()].copy()
+    query_tokens = preprocess_text(text)['clean_tokens']
+    if query_tokens:
+        query_counter = Counter(query_tokens)
+        total_query_tokens = sum(query_counter.values())
+        df['match_score'] = df['clean_tokens'].apply(
+            lambda tokens: sum((Counter(tokens) & query_counter).values()) / total_query_tokens if tokens else 0.0
+        )
+    else:
+        df['match_score'] = 0.0
+    
+    # Filter by sentiment first (before sorting)
+    df = df[df['sentiment_label'].isin(filter)]
+    
+    sortby_map = {
+        'Latest': ('publish_time', False),
+        'Highest Rating': ('rating', False),
+        'Lowest Rating': ('rating', True)
+    }
+    col, asc = sortby_map[sort_by]
+    res = (df
+    .sort_values(['match_score', col], ascending=[False, asc])
+    .reset_index(drop=True)
+    )
+    logger.info(f"Evidence search found {len(res)} matching records.")
+    return res[['review_text', 'rating', 'publish_time', 'sentiment_label']]
+
+    
 
 def display_delta(delta, decimals=2, scale=1.0, suffix=''):
     if delta is None:

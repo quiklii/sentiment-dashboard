@@ -8,7 +8,7 @@ def preprocess_text(text: str):
     doc = nlp(text)
     
     clean_tokens = [token.lemma_.lower() for token in doc if not token.is_stop and token.is_alpha]
-    return {'clean_tokens': clean_tokens}
+    return {'clean_tokens': clean_tokens} # return a dict with value as list of tokens
 
 def extract_ngrams(tokens: tuple, n: int):
     """"Extract n-grams from a list(tuple) of tokens."""

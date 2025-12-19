@@ -4,6 +4,8 @@ import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
+from src.analytics.aggregations import evidence_search
+
 from src.visualizations.wordcloud import generate_wordcloud, render_wordcloud_figure
 from src.visualizations.plots import ngram_bar_chart, render_pie_chart
 
@@ -128,17 +130,67 @@ with st.container():
             key_prefix='neg'
         )
 # CONTAINER FOR DISTRIBUTION CHARTS
-with st.container():
-    col1, col2 = st.columns(2)
+# with st.container():
+#     col1, col2 = st.columns(2)
     
-    with col1:
-        st.markdown("##### Rating Distribution")
-        color_map = {'Positive': '#22c55e', 'Neutral': '#94a3b8', 'Negative': '#ef4444'}
-        chart = render_pie_chart(
+#     with col1:
+#         st.markdown("##### Rating Distribution")
+#         color_map = {'Positive': '#22c55e', 'Neutral': '#94a3b8', 'Negative': '#ef4444'}
+#         chart = render_pie_chart(
+#             st.session_state['df_filtered'],
+#             column='sentiment_label',
+#             colors=color_map
+#             )
+#         st.altair_chart(chart, width='stretch')
+with st.container():
+    st.subheader('Evidence Explorer')
+    left_col, right_col = st.columns([1, 3], gap='large')
+    with left_col:
+        st.markdown("##### Search quotes")
+        
+        if 'query' not in st.session_state:
+            st.session_state['query'] = ''
+        query = st.text_input('Enter phrase to search',
+                              placeholder='e.g., great product',
+                              value=st.session_state['query']
+                              )
+        
+        st.markdown('**Sort by:**')
+        sort_by = st.radio('Sort by',
+                           ['Latest', 'Highest Rating', 'Lowest Rating'],
+                           index=0,
+                           label_visibility='collapsed')
+        
+        st.markdown('**Filter by sentiment:**')
+        sentiment_filter = st.multiselect('Filter by sentiment',
+                                          options=['Positive', 'Neutral', 'Negative'],
+                                          default=['Positive', 'Neutral', 'Negative'],
+                                          label_visibility='collapsed')
+        # Perform evidence search and store in session state
+        st.session_state['evidence_df'] = evidence_search(
             st.session_state['df_filtered'],
-            column='sentiment_label',
-            colors=color_map
-            )
-        st.altair_chart(chart, width='stretch')
-
+            text=query,
+            sort_by=sort_by,
+            filter=sentiment_filter
+        )
+    with right_col:
+        st.markdown('##### Search Results')
+        st.dataframe(st.session_state['evidence_df'],
+                     column_config={
+                        'review_text': st.column_config.TextColumn(
+                            'Review Text',
+                            width='large',
+                        ),
+                        'rating': st.column_config.NumberColumn(
+                            'Rating',
+                            format='%d ⭐',
+                        ),
+                        'publish_time': st.column_config.DatetimeColumn(
+                            'Published On',
+                            format='YYYY-MM-DD',
+                        ),
+                        'sentiment_label': 'Sentiment'
+                     },
+                     hide_index=True)
+        
 
