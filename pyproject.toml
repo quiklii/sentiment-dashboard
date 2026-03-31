@@ -6,15 +6,15 @@ authors = [
     { name = "quiklii" }
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.13"
 dependencies = [
-    "streamlit >=1.50.0",
+    "streamlit>=1.50.0",
     "pandas",
     "numpy",
     "altair",
     "transformers",
     "torch",
-    "spacy",
+    "spacy>=3.7",
     "pl_core_news_md @ https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.8.0/pl_core_news_md-3.8.0-py3-none-any.whl",
     "wordcloud",
     "matplotlib",
@@ -24,5 +24,6 @@ dependencies = [
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["src"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
